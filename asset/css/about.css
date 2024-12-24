@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-section img {
+    position: relative;
+    right: 25%;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hero-section p {
+    position: absolute;
+    top: 20%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    color: black;
+    padding: 1rem;
+    margin-top: 90px;
+}
+
+.hero-section1 img {
+    position: relative;
+    left: 50%;
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hero-section1 p {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    color: black;
+    padding: 1rem;
+    margin-top: 90px;
+    margin-right: 15%;
+    
+}
+
+
+
+
+.introduction, .content-section, .grading, .certification, .video-section, .footer {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Image and content layout */
+.content-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.image-box img {
+    width: 100px;
+    height: auto;
+    max-width: 100px;
+}
+
+.grading-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.certification-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.certificate img {
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Scroll-based animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

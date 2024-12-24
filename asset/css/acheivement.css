@@ -1,0 +1,165 @@
+
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Lora', serif; /* Elegant font */
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+           
+        }
+
+        header .logo img {
+            max-width: 180px;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #b89a6f; /* Premium gold hover effect */
+        }
+
+        /* Achievement Banner Section */
+        .achievement-banner {
+            text-align: center;
+            background-image: linear-gradient(to bottom right, #4f8a0c, #59a74d);
+            padding: 80px 20px;
+            color: #fff;
+            font-size: 2.8rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .achievement-banner p {
+            font-size: 1.3rem;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* Achievements Section */
+        .achievements {
+            padding: 60px 20px;
+            background-color: #fff;
+            perspective: 1000px; /* Add perspective for 3D effect */
+        }
+
+        .achievement {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 20px;
+            position: relative;
+            transform-style: preserve-3d; /* Enable 3D transformations */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .achievement:hover {
+            transform: rotateY(5deg) translateY(-5px); /* Rotate slightly for 3D effect */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .achievement-icon {
+            margin-right: 30px;
+        }
+
+        .achievement-icon img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #b89a6f;
+            transition: transform 0.3s ease;
+        }
+
+        .achievement-icon img:hover {
+            transform: scale(1.1);
+        }
+
+        .achievement-details {
+            transition: transform 0.3s ease;
+        }
+
+        .achievement-details h2 {
+            font-size: 2.2rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .achievement-details p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 10px;
+            max-width: 400px; /* Limit width for readability */
+        }
+
+        footer
+        {
+            background-color: #426644; 
+            color: #fff; 
+            padding: 20px 40px; 
+            text-align: center;
+        }
+        .social-media
+        { 
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 500px;
+            text-align: left;
+        }
+        .social-media a
+        {
+            color: #ffd700;  
+            text-decoration: none;
+        }
+        .footer-nav
+        {
+            align-items: center;
+            margin-top: 10px;
+            margin-left: 600px;
+            text-align: left;
+        }
+        .footer-nav a
+        {
+            color: #ffd700; 
+            margin: 0 10px; 
+            text-decoration: none;
+            margin-top: 10px;
+
+        }
+        
+  

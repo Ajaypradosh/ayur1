@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayur Spices</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Google Fonts import (Lora & Playfair Display for premium look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="asset/css/index.css">
+    
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            Welcome to Ayur 1 Spices
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content">
+        <h2>The Magic of Cardamom</h2>
+        <p>
+            Cardamom is the Queen of Spices. Yet, this wonder spice does more than just add flavor to food and beverages. It also has excellent and multiple medicinal properties, is used in perfumes, is chewed as a mouth freshener, and makes for a very thoughtful gift.
+        </p>
+    </section>
+
+    <!-- Image Boxes -->
+    <div class="imgbox">
+        <img src="asset/image/cardamom.jpg" alt="Cardamom Image">
+        <p class="description">Cardamom is known for its sweet aroma and is often used in desserts and beverages.</p>
+    </div>
+    <div class="imgbox">
+        <img src="asset/image/cardamom.png" alt="Cardamom Image">
+        <p class="description">Rich in antioxidants, cardamom helps in digestion and improves oral health.</p>
+    </div>
+    <div class="imgbox">
+        <img src="asset/image/cardamom2.png" alt="Cardamom Image">
+        <p class="description">Used in traditional medicine, cardamom may help reduce blood pressure and cholesterol levels.</p>
+    </div>
+    <section class="grading">
+        <h2>Graded to your Requirement</h2><br>
+        <p>‘One size doesn’t fit all’ is true in the case of cardamom as well. <br>Because of their multiple uses and benefits, cardamom pods of different sizes are used in different applications.<br> That is why Ayur Spices is graded by size.<br> However, the grading is never about quality. Whatever the size, quality remains world class.</p>
+        <div class="grading-options">
+            <img src="asset/image/8mm.webp" alt="Cardamom Image">
+            <img src="asset/image/7.5mm.webp" alt="Cardamom Image">
+            <img src="asset/image/7mm.webp" alt="Cardamom Image">
+            <img src="asset/image/6.5mm.webp" alt="Cardamom Image">
+            <img src="asset/image/6mm.webp" alt="Cardamom Image">
+        </div>
+    </section>
+
+
+    <!-- Currency Selector -->
+
+
+    <footer id="footer">
+
+    </footer>
+
+
+
+    <script src="asset/js/function.js"></script>
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Array of local image file paths
+        const images = [
+            "asset/image/cardamom.jpg",
+            "asset/image/cardamom.png",
+            "asset/image/cardamom2.png"
+        ];
+
+        let currentImageIndex = 0;
+
+        // Function to automatically change the hero image every 3 seconds
+        function startSlideshow() {
+            setInterval(() => {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                document.getElementById("hero").style.backgroundImage = `url('${images[currentImageIndex]}')`;
+            }, 3000);
+        }
+
+        // Set the initial image and start the slideshow
+        document.getElementById("hero").style.backgroundImage = `url('${images[0]}')`;
+        startSlideshow();
+        
+
+       
+    </script>
+
+
+
+</body>
+</html>

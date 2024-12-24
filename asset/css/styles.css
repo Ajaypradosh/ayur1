@@ -1,0 +1,177 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c0b0b;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 25px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Banner Section */
+.banner {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 50px;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.banner img {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+/* Products Section */
+.products {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+}
+
+.product p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Grading Section */
+.grading {
+    background-color: #e9f5e9;
+    padding: 30px;
+    text-align: center;
+}
+
+.grading h2 {
+    margin-bottom: 20px;
+}
+
+.grading-options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.option {
+    background-color: #fff;
+    padding: 20px;
+    width: 25%;
+    text-align: center;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Recipes Section */
+.recipes {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.recipes h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.recipe {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+}
+
+.recipe img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.recipe p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer form {
+    margin-bottom: 20px;
+}
+
+footer input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+footer button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}

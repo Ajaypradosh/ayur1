@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ayur Spices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background Animation */
+        body {
+            font-family: 'Lora', serif;
+            background: linear-gradient(135deg, #f3efe5, #ffe4b5);
+            background-size: 400% 400%;
+            animation: backgroundAnimation 10s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            overflow: hidden;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Login Container Styling */
+        .login-container {
+            width: 400px;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            font-family: 'Playfair Display', serif;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 0.9em;
+            color: #666;
+            pointer-events: none;
+            transition: 0.3s ease;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:hover {
+            box-shadow: 0 0 8px rgba(255, 183, 0, 0.3);
+        }
+
+        .input-group input:focus {
+            border-color: #ffb700;
+            outline: none;
+            box-shadow: 0 0 8px rgba(255, 183, 0, 0.6);
+        }
+
+        .input-group input:focus + label,
+        .input-group input:not(:placeholder-shown) + label {
+            top: -10px;
+            left: 5px;
+            font-size: 0.75em;
+            color: #ffb700;
+            background-color: #ffffff;
+            padding: 0 5px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #ffb700;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e6a700;
+            box-shadow: 0 4px 10px rgba(230, 167, 0, 0.4);
+        }
+
+        .signup-link {
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+
+        .signup-link a {
+            color: #ffb700;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .signup-link a:hover {
+            color: #e6a700;
+        }
+
+        /* 3D Floating Elements with Parallax Effect */
+        .floating-cube, .floating-sphere {
+            position: absolute;
+            z-index: 1;
+            opacity: 0.6;
+            animation: float 5s infinite alternate;
+        }
+
+        .floating-cube {
+            width: 60px;
+            height: 60px;
+            background-color: #ffb700;
+            border-radius: 8px;
+            top: 10%;
+            left: 10%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: rotate3d(1, 1, 1, 45deg);
+        }
+
+        .floating-sphere {
+            width: 80px;
+            height: 80px;
+            background-color: #ffd966;
+            border-radius: 50%;
+            bottom: 15%;
+            right: 15%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-20px) rotate(360deg); }
+        }
+
+        /* Parallax Mouse Movement */
+        body:hover .floating-cube, body:hover .floating-sphere {
+            animation-play-state: paused;
+            transition: transform 0.2s ease;
+        }
+
+        body:hover .floating-cube {
+            transform: translate(-10px, -10px) rotate3d(1, 1, 1, 45deg);
+        }
+
+        body:hover .floating-sphere {
+            transform: translate(10px, 10px) scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="floating-cube"></div>
+    <div class="floating-sphere"></div>
+
+    <div class="login-container">
+        <h2>Login to Ayur Spices</h2>
+        <form action="/login" method="post">
+            <div class="input-group">
+                <input type="email" id="email" name="email" required placeholder=" ">
+                <label for="email">Email Address</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" required placeholder=" ">
+                <label for="password">Password</label>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <div class="signup-link">
+            Don't have an account? <a href="signup.html">Sign Up</a>
+        </div>
+    </div>
+
+</body>
+</html>

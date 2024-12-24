@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Ayur Spices Cardamom</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header and Footer */
+        header, footer {
+            background-color: #2a2a2a;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Introduction Section */
+        .introduction {
+            padding: 2rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Hero Sections */
+        .hero-section, .hero-section1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 2rem;
+            text-align: left;
+        }
+
+        .hero-section img, .hero-section1 img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section p, .hero-section1 p {
+            max-width: 400px;
+            font-size: 1.1rem;
+            color: #333333;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Certification Section */
+        .certification {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .certification h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .certification-cards {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .certificate img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Scroll-based animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <h1>Welcome to Ayur Spices</h1>
+</header>
+
+<main>
+    <section class="introduction fade-in">
+        <h2>The Origins of the Idukki's Best Cardamom & Spices</h2>
+        <p>Ayur Spices pioneered its order for the premium cardamom and spices they provide...</p>
+    </section>
+
+    <div class="hero-section fade-in">
+        <img src="asset/image/cardamom.jpg" alt="Cardamom Image">
+        <p>The Ayur Spices brand provides the best spices to their customers. Our first-class grading processes ensure that we deliver only the best quality spices.</p>
+    </div>
+
+    <section class="introduction fade-in">
+        <h2>Ensuring the Best Quality</h2>
+        <p>We make it a priority to ensure our products meet the highest quality standards, verified by customer feedback.</p>
+    </section>
+
+    <div class="hero-section1 fade-in">
+        <img src="asset/image/cardamom.png" alt="Cardamom Image">
+        <p>Cardamom, often called the "Queen of Spices," is a highly aromatic spice. Our best products guarantee satisfaction for our customers.</p>
+    </div>
+
+    <section class="introduction fade-in">
+        <h2>More Than Just Cardamom</h2>
+        <p>Ayur Spices is renowned for providing high-quality spices across Idukki.</p>
+    </section>
+
+    <div class="hero-section fade-in">
+        <img src="asset/image/cardamom.jpg" alt="Cardamom Image">
+        <p>We offer a wide range of premium spices, providing our customers with quality and competitive prices.</p>
+    </div>
+
+    <section class="certification fade-in">
+        <h2>Certified as Idukki's Best Cardamom</h2>
+        <div class="certification-cards">
+            <div class="certificate">
+                <img src="asset/image/quality.jpg" alt="Quality Certification">
+            </div>
+            <div class="certificate">
+                <img src="asset/image/natural.jpg" alt="Natural Certification">
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="footer">
+    <p>&copy; 2024 Ayur Spices. All rights reserved.</p>
+</footer>
+
+<script src="function.js"></script>
+<script src="about.js"></script>
+<script>
+    $(document).ready(function() {
+        $(window).on("scroll", function() {
+            $(".fade-in").each(function() {
+                if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
+                    $(this).addClass("visible");
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
