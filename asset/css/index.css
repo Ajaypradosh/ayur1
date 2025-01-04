@@ -16,9 +16,7 @@ body {
 }
 
 /* Navbar Specific Styles - Ignore or adjust these if they conflict */
-.navbar {
-    /* background-color: red; */ /* Example of a conflicting style */
-}
+
 
 /* Other styles... */
 .icons {
@@ -107,13 +105,19 @@ body {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 831ce46f42a13f4b82f61593fc36c2c4eaf8a739
 /* Content Section */
 .content {
     padding: 60px 40px;
     text-align: center;
     background-color: #ffffff;
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 831ce46f42a13f4b82f61593fc36c2c4eaf8a739
         .hero-text {
             margin-top: 30px;
             position: relative;
@@ -123,7 +127,11 @@ body {
             line-height: 1.2;
             text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* Enhanced text shadow for better readability */
         }
+<<<<<<< HEAD
+
+=======
 >>>>>>> b728e89091e2afb337a15f873566dda9fc3f5b60
+>>>>>>> 831ce46f42a13f4b82f61593fc36c2c4eaf8a739
 
 .content h2 {
     color: #2d2d2d;
@@ -166,11 +174,19 @@ body {
 }
 
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 831ce46f42a13f4b82f61593fc36c2c4eaf8a739
 .imgbox:hover {
     transform: translateY(-5px); /* Slight lift effect on hover */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* More intense shadow for hover effect */
 }
+<<<<<<< HEAD
+
 =======
+=======
+>>>>>>> 831ce46f42a13f4b82f61593fc36c2c4eaf8a739
         /* Image Box */
         .imgbox {
             width: 95%;
@@ -185,7 +201,11 @@ body {
             vertical-align: top;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+<<<<<<< HEAD
+
+=======
 >>>>>>> b728e89091e2afb337a15f873566dda9fc3f5b60
+>>>>>>> 831ce46f42a13f4b82f61593fc36c2c4eaf8a739
 
 .imgbox img:hover {
     transform: scale(1.05);
