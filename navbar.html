@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Full-Width Header Design</title>
+    <title>Responsive Header with Functional Toggle</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Custom Header Styling */
@@ -50,31 +50,12 @@
         .nav-link:hover::after {
             width: 100%;
         }
-
-        /* Login/Signup Button Styling */
-        .login-signup .btn {
-            font-weight: 600;
-            font-size: 1em;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            background: linear-gradient(135deg, #aee832 0%, #65a826 100%);
-            transition: all 0.3s ease;
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        .login-signup .btn:hover {
-            transform: translateY(-2px);
-            background: linear-gradient(135deg, #e6c46d 0%, #b59342 100%);
-        }
     </style>
 </head>
 <body>
     <header class="container-fluid">
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
+            <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand logo" href="#">
                     <img src="asset/image/ayurlogo.png" alt="Ayur Spices">
@@ -85,10 +66,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- Collapsible Navigation and Buttons -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <!-- Navigation Menu -->
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Collapsible Navigation -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav text-end">
                         <li class="nav-item">
                             <a href="index.html" class="nav-link">Home</a>
                         </li>
@@ -99,21 +79,15 @@
                             <a href="achievement.html" class="nav-link">Achievements</a>
                         </li>
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link">Contact Us</a>
+                            <a href="contact.html" class="nav-link">ContactUs</a>
                         </li>
                     </ul>
-
-                    <!-- Login/Signup Buttons -->
-                    <div class="login-signup d-flex gap-3 mt-2 mt-lg-0">
-                        <a href="login.html" class="btn">Login</a>
-                        <a href="signup.html" class="btn">Sign Up</a>
-                    </div>
                 </div>
             </div>
         </nav>
     </header>
 
+    <!-- Bootstrap JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-    

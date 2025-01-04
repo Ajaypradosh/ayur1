@@ -1,165 +1,114 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Reset default browser styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c0b0b;
+}
 
-        /* Body styling */
-        body {
-            font-family: 'Lora', serif; /* Elegant font */
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+}
 
-        /* Header styles */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background-color: #fff;
-           
-        }
+/* Achievement Banner */
+.achievement-banner {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 50px;
+}
 
-        header .logo img {
-            max-width: 180px;
-        }
+.achievement-banner h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+}
 
-        header nav ul {
-            display: flex;
-            list-style: none;
-        }
+.achievement-banner p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #666;
+    font-family: 'Lora', serif;
+}
 
-        header nav ul li {
-            margin: 0 20px;
-        }
+/* Achievements Section */
+.achievements {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
 
-        header nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
+.achievement {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+}
 
-        header nav ul li a:hover {
-            color: #b89a6f; /* Premium gold hover effect */
-        }
+.achievement-icon img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
 
-        /* Achievement Banner Section */
-        .achievement-banner {
-            text-align: center;
-            background-image: linear-gradient(to bottom right, #4f8a0c, #59a74d);
-            padding: 80px 20px;
-            color: #fff;
-            font-size: 2.8rem;
-            font-weight: 700;
-            position: relative;
-        }
+.achievement-details h2 {
+    font-size: 1.8rem;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
 
-        .achievement-banner p {
-            font-size: 1.3rem;
-            margin-top: 15px;
-            font-style: italic;
-        }
+.achievement-details p {
+    font-size: 1rem;
+    color: #555;
+    font-family: 'Lora', serif;
+}
 
-        /* Achievements Section */
-        .achievements {
-            padding: 60px 20px;
-            background-color: #fff;
-            perspective: 1000px; /* Add perspective for 3D effect */
-        }
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
 
-        .achievement {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 40px;
-            background-color: #fafafa;
-            padding: 30px;
-            border-radius: 20px;
-            position: relative;
-            transform-style: preserve-3d; /* Enable 3D transformations */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
+footer form {
+    margin-bottom: 20px;
+}
 
-        .achievement:hover {
-            transform: rotateY(5deg) translateY(-5px); /* Rotate slightly for 3D effect */
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
+footer input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
 
-        .achievement-icon {
-            margin-right: 30px;
-        }
+footer button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: white;
+}
 
-        .achievement-icon img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 3px solid #b89a6f;
-            transition: transform 0.3s ease;
-        }
-
-        .achievement-icon img:hover {
-            transform: scale(1.1);
-        }
-
-        .achievement-details {
-            transition: transform 0.3s ease;
-        }
-
-        .achievement-details h2 {
-            font-size: 2.2rem;
-            color: #333;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .achievement-details p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 10px;
-            max-width: 400px; /* Limit width for readability */
-        }
-
-        footer
-        {
-            background-color: #426644; 
-            color: #fff; 
-            padding: 20px 40px; 
-            text-align: center;
-        }
-        .social-media
-        { 
-            position: absolute;
-            margin-top: 10px;
-            margin-left: 500px;
-            text-align: left;
-        }
-        .social-media a
-        {
-            color: #ffd700;  
-            text-decoration: none;
-        }
-        .footer-nav
-        {
-            align-items: center;
-            margin-top: 10px;
-            margin-left: 600px;
-            text-align: left;
-        }
-        .footer-nav a
-        {
-            color: #ffd700; 
-            margin: 0 10px; 
-            text-decoration: none;
-            margin-top: 10px;
-
-        }
-        
-  
+footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
