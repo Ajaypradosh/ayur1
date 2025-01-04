@@ -86,6 +86,7 @@ body {
         }
 
         .hero-text {
+            margin-top: 30px;
             position: relative;
             z-index: 1;
             font-size: 3em; /* Larger text for premium appeal */
@@ -132,7 +133,8 @@ body {
 
         /* Image Box */
         .imgbox {
-            width: 30%;
+            width: 95%;
+            height: 90%;
             margin: 20px 1.5%;
             padding: 20px;
             background: #fff;
@@ -207,10 +209,10 @@ body {
 .col-2
 {
     margin-left: 30px;
+    display: inline-block;
 }
 .col-2 .img-fluid
 {
     height: 120px;
 
 }
-        
