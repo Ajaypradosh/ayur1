@@ -1,10 +1,8 @@
-
-        $(document).ready(function(){
+$(document).ready(function() {
+    // Load the footer
     $("#footer").load("footer.html");
-});
 
-
-$(document).ready(function(){
+    // Load the header
     $("#header").load("navbar.html");
 });
 
