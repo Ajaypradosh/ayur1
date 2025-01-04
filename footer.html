@@ -11,8 +11,8 @@
             background-color: #426644;
             color: #fff;
             padding: 20px 0;
-            text-align: center;
         }
+
         .social-media a {
             font-weight: bold;
             font-size: medium;
@@ -21,6 +21,7 @@
             transition: color 0.3s ease-in-out;
             margin: 0 10px;
         }
+
         .social-media .facebook:hover { color: rgb(17, 153, 194); }
         .social-media .instagram:hover { color: rgb(248, 86, 221); }
         .social-media .twitter:hover { color: rgb(17, 153, 194); }
@@ -29,20 +30,29 @@
 </head>
 <body>
     <footer class="text-center">
+        <!-- Footer Text -->
         <p class="mb-3">&copy; 2024 Ayur Spices. All rights reserved.</p>
         
         <!-- Social Media Links -->
-        <div class="social-media mb-3 d-flex justify-content-center flex-wrap">
-            <a href="#" class="facebook me-3"><i class="bx bxl-facebook-square"></i> Facebook</a>
-            <a href="#" class="instagram me-3"><i class="bx bxl-instagram"></i> Instagram</a>
-            <a href="#" class="twitter me-3"><i class="bx bxl-twitter"></i> Twitter</a>
-            <a href="#" class="whatsapp"><i class="bx bxl-whatsapp"></i> WhatsApp</a>
+        <div class="social-media mb-3 d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#" class="facebook d-flex align-items-center gap-2">
+                <i class="bx bxl-facebook-square"></i> Facebook
+            </a>
+            <a href="#" class="instagram d-flex align-items-center gap-2">
+                <i class="bx bxl-instagram"></i> Instagram
+            </a>
+            <a href="#" class="twitter d-flex align-items-center gap-2">
+                <i class="bx bxl-twitter"></i> Twitter
+            </a>
+            <a href="#" class="whatsapp d-flex align-items-center gap-2">
+                <i class="bx bxl-whatsapp"></i> WhatsApp
+            </a>
         </div>
 
         <!-- Footer Navigation Links -->
-        <div class="footer-nav d-flex justify-content-center flex-wrap">
-            <a href="#" class="text-white me-3 mb-2">Privacy Policy</a>
-            <a href="#" class="text-white mb-2">Terms of Service</a>
+        <div class="footer-nav d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+            <a href="#" class="text-white text-decoration-none">Terms of Service</a>
         </div>
     </footer>
 
