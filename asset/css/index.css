@@ -16,9 +16,7 @@ body {
 }
 
 /* Navbar Specific Styles - Ignore or adjust these if they conflict */
-.navbar {
-    /* background-color: red; */ /* Example of a conflicting style */
-}
+
 
 /* Other styles... */
 .icons {
@@ -112,6 +110,16 @@ body {
     text-align: center;
     background-color: #ffffff;
 }
+        .hero-text {
+            margin-top: 30px;
+            position: relative;
+            z-index: 1;
+            font-size: 3em; /* Larger text for premium appeal */
+            max-width: 80%;
+            line-height: 1.2;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* Enhanced text shadow for better readability */
+        }
+
 
 .content h2 {
     color: #2d2d2d;
@@ -153,10 +161,27 @@ body {
     transition: transform 0.3s ease;
 }
 
+
 .imgbox:hover {
     transform: translateY(-5px); /* Slight lift effect on hover */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* More intense shadow for hover effect */
 }
+
+        /* Image Box */
+        .imgbox {
+            width: 95%;
+            height: 90%;
+            margin: 20px 1.5%;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px; /* More rounded for premium effect */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
 
 .imgbox img:hover {
     transform: scale(1.05);
@@ -212,10 +237,10 @@ body {
 .col-2
 {
     margin-left: 30px;
+    display: inline-block;
 }
 .col-2 .img-fluid
 {
     height: 120px;
 
 }
-        
