@@ -5,85 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayur Spices</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Google Fonts import (Lora & Playfair Display for premium look) -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="asset/css/index.css">
-    
 </head>
 <body>
 
-    <!-- Header -->
-    <header id="header">
-        
-    </header>
+    
 
     <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="overlay"></div>
-        <div class="hero-text">
-            Welcome to Ayur 1 Spices
+    <section class="hero position-relative" id="hero" style="height: 400px; background-size: cover;">
+        <div class="overlay position-absolute w-100 h-100" style="background: rgba(0, 0, 0, 0.5);"></div>
+        <div class="hero-text text-white text-center position-absolute w-100 d-flex align-items-center justify-content-center" style="height: 100%;">
+            <h2>Welcome to Ayur Spices</h2>
         </div>
     </section>
 
     <!-- Content Section -->
-    <section class="content">
-        <h2>The Magic of Cardamom</h2>
-        <p>
-            Cardamom is the Queen of Spices. Yet, this wonder spice does more than just add flavor to food and beverages. It also has excellent and multiple medicinal properties, is used in perfumes, is chewed as a mouth freshener, and makes for a very thoughtful gift.
-        </p>
-    </section>
-
-    <!-- Image Boxes -->
-    <div class="imgbox">
-        <img src="asset/image/cardamom.jpg" alt="Cardamom Image">
-        <p class="description">Cardamom is known for its sweet aroma and is often used in desserts and beverages.</p>
-    </div>
-    <div class="imgbox">
-        <img src="asset/image/cardamom.png" alt="Cardamom Image">
-        <p class="description">Rich in antioxidants, cardamom helps in digestion and improves oral health.</p>
-    </div>
-    <div class="imgbox">
-        <img src="asset/image/cardamom2.png" alt="Cardamom Image">
-        <p class="description">Used in traditional medicine, cardamom may help reduce blood pressure and cholesterol levels.</p>
-    </div>
-    <section class="grading">
-        <h2>Graded to your Requirement</h2><br>
-        <p>‘One size doesn’t fit all’ is true in the case of cardamom as well. <br>Because of their multiple uses and benefits, cardamom pods of different sizes are used in different applications.<br> That is why Ayur Spices is graded by size.<br> However, the grading is never about quality. Whatever the size, quality remains world class.</p>
-        <div class="grading-options">
-            <img src="asset/image/8mm.webp" alt="Cardamom Image">
-            <img src="asset/image/7.5mm.webp" alt="Cardamom Image">
-            <img src="asset/image/7mm.webp" alt="Cardamom Image">
-            <img src="asset/image/6.5mm.webp" alt="Cardamom Image">
-            <img src="asset/image/6mm.webp" alt="Cardamom Image">
+    <section class="content py-5">
+        <div class="container">
+            <h2 class="mb-4">The Magic of Cardamom</h2>
+            <p>
+                Cardamom is the Queen of Spices. Yet, this wonder spice does more than just add flavor to food and beverages. It also has excellent and multiple medicinal properties, is used in perfumes, is chewed as a mouth freshener, and makes for a very thoughtful gift.
+            </p>
         </div>
     </section>
 
+    <!-- Image Boxes -->
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="asset/image/cardamom.jpg" class="card-img-top" alt="Cardamom Image">
+                    <div class="card-body">
+                        <p class="card-text">Cardamom is known for its sweet aroma and is often used in desserts and beverages.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="asset/image/cardamom.png" class="card-img-top" alt="Cardamom Image">
+                    <div class="card-body">
+                        <p class="card-text">Rich in antioxidants, cardamom helps in digestion and improves oral health.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="asset/image/cardamom2.png" class="card-img-top" alt="Cardamom Image">
+                    <div class="card-body">
+                        <p class="card-text">Used in traditional medicine, cardamom may help reduce blood pressure and cholesterol levels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Currency Selector -->
+    <!-- Grading Section -->
+    <section class="grading py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4">Graded to your Requirement</h2>
+            <p>
+                ‘One size doesn’t fit all’ is true in the case of cardamom as well. <br>
+                Because of their multiple uses and benefits, cardamom pods of different sizes are used in different applications.<br>
+                That is why Ayur Spices is graded by size.<br>
+                However, the grading is never about quality. Whatever the size, quality remains world class.
+            </p>
+            <div class="row text-center">
+                <div class="col-2">
+                    <img src="asset/image/8mm.webp" class="img-fluid" alt="Cardamom 8mm">
+                </div>
+                <div class="col-2">
+                    <img src="asset/image/7.5mm.webp" class="img-fluid" alt="Cardamom 7.5mm">
+                </div>
+                <div class="col-2">
+                    <img src="asset/image/7mm.webp" class="img-fluid" alt="Cardamom 7mm">
+                </div>
+                <div class="col-2">
+                    <img src="asset/image/6.5mm.webp" class="img-fluid" alt="Cardamom 6.5mm">
+                </div>
+                <div class="col-2">
+                    <img src="asset/image/6mm.webp" class="img-fluid" alt="Cardamom 6mm">
+                </div>
+            </div>
+        </div>
+    </section>
 
+   
 
-    <footer id="footer">
-
-    </footer>
-
-
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="asset/js/function.js"></script>
-    <!-- FontAwesome for icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <script>
-        // Array of local image file paths
         const images = [
             "asset/image/cardamom.jpg",
             "asset/image/cardamom.png",
             "asset/image/cardamom2.png"
         ];
-
         let currentImageIndex = 0;
 
-        // Function to automatically change the hero image every 3 seconds
         function startSlideshow() {
             setInterval(() => {
                 currentImageIndex = (currentImageIndex + 1) % images.length;
@@ -91,15 +111,9 @@
             }, 3000);
         }
 
-        // Set the initial image and start the slideshow
         document.getElementById("hero").style.backgroundImage = `url('${images[0]}')`;
         startSlideshow();
-        
-
-       
     </script>
-
-
 
 </body>
 </html>
