@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # ayur1
 # ajay
 =======
@@ -9,3 +10,7 @@
 
 #darkstar100max
 #yadhunandhan
+=======
+# ayur1 
+# first update
+>>>>>>> 5e8d24f71dcef6a28a22a022b4af8fcd2768d06e

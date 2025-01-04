@@ -204,4 +204,13 @@ body {
             height: auto;
         }
 
+.col-2
+{
+    margin-left: 30px;
+}
+.col-2 .img-fluid
+{
+    height: 120px;
+
+}
         

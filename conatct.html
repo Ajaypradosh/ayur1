@@ -1,109 +1,105 @@
-<!DOCTYPE hmtl>
-<html>
-    <head>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Map Section</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        * {
+        body {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        .map
-        {
-            border-color: rgb(97, 175, 78);
+
+        .map iframe {
+            border: 3px solid rgb(97, 175, 78);
             border-radius: 5px;
-            width: 300px;
-            height: 300px;
-            margin-left: 40px;
-        }
-        .demo{
             width: 100%;
-            height: 200px;
+            height: 100%;
         }
-        .searchArea
-        {
-            position: absolute;
-            margin-left: 800px;
-            margin-top: -300px;
-        }
-        .searchArea .input-box
-        {
-            width: 350px;
-            height: 40px;
+
+        .search-area .input-box {
+            width: 100%;
+            padding: 10px;
             border-radius: 3px;
+            border: 1px solid #ccc;
             text-align: center;
-            
         }
 
-
-
-        button{
-            width: 10em;
+        button {
+            width: 100%;
             height: 40px;
-            border-radius: 10px;
+            border-radius: 5px;
             color: white;
             background-color: rgb(26, 163, 26);
             border: none;
-
+            transition: background-color 0.3s ease;
         }
 
-        button:hover{
+        button:hover {
             background-color: rgb(14, 255, 14);
-            transition: 0.3s;
         }
-        
 
-        .about{
-            position: absolute;
-            right: 15em;
-            bottom: 15em;
-            
-        }
-        .about h2
-        {
-            font-size: large;
+        .about h2 {
             color: rgb(9, 112, 9);
         }
-        
+
+        .about p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .search-area,
+            .about {
+                text-align: center;
+                margin: 20px 0;
+            }
+        }
     </style>
-    <body>
-        
-        <header id="header">
-        
-        </header>
-        <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6361.114445691486!2d77.16555956425846!3d9.965544196263039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07a195b8f9c5f5%3A0xbe273d2f046977e!2sAYUR%201%20SPICES!5e0!3m2!1sen!2sin!4v1730896708224!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        
-        <div class="searchArea">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header"></header>
 
-            <input type="text" class="input-box" placeholder="email">
-            <button type="submit">Subscribe</button>
-            
-        </div>
-        <div class="about">
-            <h2><u>Contact Us:</u></h2><br>
-            <p>
-                <h2>Email : Example@gmail.com</h2> <br>
-                <h2>phone : +91 9876543210</h2> <br>
-                <h2>Address : 123, ABC Street, XYZ City, India</h2> <br>
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <!-- Map Section -->
+            <div class="col-lg-6">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6361.114445691486!2d77.16555956425846!3d9.965544196263039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07a195b8f9c5f5%3A0xbe273d2f046977e!2sAYUR%201%20SPICES!5e0!3m2!1sen!2sin!4v1730896708224!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
 
-            </p>
+            <!-- Subscription Section -->
+            <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center">
+                <div class="search-area w-100">
+                    <input type="text" class="form-control input-box mb-3" placeholder="Enter your email">
+                    <button class="btn btn-success">Subscribe</button>
+                </div>
+            </div>
         </div>
-        
-        
-        
-        
-        
-        
-        <div class="demo">
 
+        <!-- Contact Us Section -->
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="about">
+                    <h2><u>Contact Us:</u></h2>
+                    <p><strong>Email:</strong> Example@gmail.com</p>
+                    <p><strong>Phone:</strong> +91 9876543210</p>
+                    <p><strong>Address:</strong> 123, ABC Street, XYZ City, India</p>
+                </div>
+            </div>
         </div>
-        
-        
-        <footer id="footer"></footer>
-        <script src="asset/js/function.js"></script>
-    </body>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/js/function.js"></script>
+</body>
 </html>
