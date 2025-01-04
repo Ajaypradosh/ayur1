@@ -8,6 +8,24 @@
 >>>>>>> 98992d86d3db5744bcd824982e2fb86fcfa2b53b
 
 <<<<<<< HEAD
+
+#darkstar100max
+#kjef
+=======
+# ayur1 
+# first update
+>>>>>>> 6558269b17f88e8a0759829146809351ac8c96e3
+=======
+<<<<<<< HEAD
+
+#darkstar100max
+#yadhunandhan
+=======
+# ayur1 
+# first update
+>>>>>>> 5e8d24f71dcef6a28a22a022b4af8fcd2768d06e
+=======
+<<<<<<< HEAD
 #jabirajkng
 =======
 
@@ -17,3 +35,5 @@
 # ayur1 
 # first update
 >>>>>>> 6558269b17f88e8a0759829146809351ac8c96e3
+>>>>>>> cd02841711bd21a8779cb58df701f571de79df47
+>>>>>>> bebab281b112d22a3b4ab54aad021442ca803584
