@@ -4,13 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayur Spices</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="asset/css/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        /* Custom Header Styling */
+        .navbar {
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #ffffff00 0%, #7e505000 100%);
+        }
+
+        /* Adjusted Logo Styling */
+        .logo img {
+            height: 50px; /* Adjusted height */
+            filter: drop-shadow(2px 4px 6px rgba(255, 255, 255, 0.186));
+        }
+
+        /* Navigation Menu Styling */
+        .nav-link {
+            color: #376701;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 1.1em;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            transition: color 0.3s, transform 0.2s;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #d4af37;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #000000;
+            transform: translateY(-2px);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #426644;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .social-media a {
+            font-weight: bold;
+            font-size: medium;
+            color: whitesmoke;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+            margin: 0 10px;
+        }
+
+        .social-media .facebook:hover { color: rgb(17, 153, 194); }
+        .social-media .instagram:hover { color: rgb(248, 86, 221); }
+        .social-media .twitter:hover { color: rgb(17, 153, 194); }
+        .social-media .whatsapp:hover { color: rgb(45, 233, 70); }
+    </style>
 </head>
 <body>
-    <header id="header"></header>
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="#">
+                    <img src="asset/image/ayurlogo.png" alt="Ayur Spices">
+                </a>
+
+                <!-- Responsive Toggle Button for Mobile Devices -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible Navigation -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav text-end">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="achievement.html" class="nav-link">Achievements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero position-relative" id="hero" style="height: 400px; background-size: cover;">
         <div class="overlay position-absolute w-100 h-100" style="background: rgba(0, 0, 0, 0.5);"></div>
@@ -20,20 +118,22 @@
     </section>
 
     <!-- Content Section -->
-    <section class="content py-5">
-        <div class="container">
-            <h2 class="mb-4">The Magic of Cardamom</h2>
-            <p>
-                Cardamom is the Queen of Spices. Yet, this wonder spice does more than just add flavor to food and beverages. It also has excellent and multiple medicinal properties, is used in perfumes, is chewed as a mouth freshener, and makes for a very thoughtful gift.
-            </p>
+    <div class="container my-5">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">The Magic of Cardamom</h2>
+                <p class="card-text">
+                    Cardamom is the Queen of Spices. Yet, this wonder spice does more than just add flavor to food and beverages. It also has excellent and multiple medicinal properties, is used in perfumes, is chewed as a mouth freshener, and makes for a very thoughtful gift.
+                </p>
+            </div>
         </div>
-    </section>
+    </div>
 
     <!-- Image Boxes -->
     <div class="container mb-5">
         <div class="row">
             <div class="col-md-4 mb-4">
-                <div class="imgbox">
+                <div class="card">
                     <img src="asset/image/cardamom.jpg" class="card-img-top" alt="Cardamom Image">
                     <div class="card-body">
                         <p class="card-text">Cardamom is known for its sweet aroma and is often used in desserts and beverages.</p>
@@ -41,7 +141,7 @@
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="imgbox">
+                <div class="card">
                     <img src="asset/image/cardamom.png" class="card-img-top" alt="Cardamom Image">
                     <div class="card-body">
                         <p class="card-text">Rich in antioxidants, cardamom helps in digestion and improves oral health.</p>
@@ -49,7 +149,7 @@
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="imgbox">
+                <div class="card">
                     <img src="asset/image/cardamom2.png" class="card-img-top" alt="Cardamom Image">
                     <div class="card-body">
                         <p class="card-text">Used in traditional medicine, cardamom may help reduce blood pressure and cholesterol levels.</p>
@@ -89,31 +189,35 @@
         </div>
     </section>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="asset/js/function.js"></script>
+    <!-- Footer Section -->
+    <footer class="text-center">
+        <!-- Footer Text -->
+        <p class="mb-3">&copy; 2024 Ayur Spices. All rights reserved.</p>
+        
+        <!-- Social Media Links -->
+        <div class="social-media mb-3 d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#" class="facebook d-flex align-items-center gap-2">
+                <i class="bx bxl-facebook-square"></i> Facebook
+            </a>
+            <a href="#" class="instagram d-flex align-items-center gap-2">
+                <i class="bx bxl-instagram"></i> Instagram
+            </a>
+            <a href="#" class="twitter d-flex align-items-center gap-2">
+                <i class="bx bxl-twitter"></i> Twitter
+            </a>
+            <a href="#" class="whatsapp d-flex align-items-center gap-2">
+                <i class="bx bxl-whatsapp"></i> WhatsApp
+            </a>
+        </div>
 
-    <script>
-        const images = [
-            "asset/image/cardamom.jpg",
-            "asset/image/cardamom.png",
-            "asset/image/cardamom2.png"
-        ];
-        let currentImageIndex = 0;
+        <!-- Footer Navigation Links -->
+        <div class="footer-nav d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+            <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+        </div>
+    </footer>
 
-        function startSlideshow() {
-            setInterval(() => {
-                currentImageIndex = (currentImageIndex + 1) % images.length;
-                document.getElementById("hero").style.backgroundImage = `url('${images[currentImageIndex]}')`;
-            }, 3000);
-        }
-
-        document.getElementById("hero").style.backgroundImage = `url('${images[0]}')`;
-        startSlideshow();
-    </script>
-        <!-- Footer -->
-
-        <footer id="footer"></footer>
-
-
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
