@@ -30,10 +30,10 @@ body{
     transition: 0.1s;
 }
 .banner .bg:nth-child(1){
-    background-image: url(images/banner_00.jpg);
+    background-image: url(/asset/image/banner_00.jpg);
 }
 .banner .bg:nth-child(2){
-    background-image: url(images/mala1.png);
+    background-image: url(/asset/image/mala1.png);
 }
 .banner .bg:nth-child(3){
     top: 32%;
@@ -52,10 +52,10 @@ body{
     font-size: 11vw;
 }
 .banner .bg:nth-child(4){
-    background-image: url(images/mala.png);
+    background-image: url(/asset/image/mala.png);
 }
 .banner .bg:nth-child(5){
-    background-image: url(images/leafff.png);
+    background-image: url(/asset/image/leafff.png);
 }
 .tab{
     min-height: 100vh;
@@ -83,7 +83,7 @@ body{
 .tab.tab1{
     background:linear-gradient(
         to top, #000000 0%, transparent 20% , #000000 70%
-   ),url(images/tab1.jpg);
+   ),url(/asset/image/tab1.jpg);
    
 }
 .tab.tab1 .content{
@@ -98,7 +98,7 @@ body{
 .tab.tab2{
     background:linear-gradient(
         to top, #000000 0%, transparent 20% , #000000 70%
-   ),url(images/idukki1.jpg);
+   ),url(/asset/image/idukki1.jpg);
 }
 .tab.tab1 .content{
     width: 700px;
