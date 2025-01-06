@@ -15,7 +15,7 @@ body::before{
     left: 0;
     width: 150%;
     height: 150%;
-    background-image: url(/asset/image/cardomomb.jpg);
+    background-image: url(/asset/image/pepperba.jpg);
     background-size: cover;
     background-position: center;
     opacity: 0.03;
@@ -39,10 +39,10 @@ input{
     color: rgb(17, 126, 41);
 }
 .info p{
-    font-size: 20px;
+    font-size: 5px;
     line-height: 2pc;
     margin-bottom: 30px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 .explore{
@@ -61,48 +61,55 @@ input{
     justify-content: space-between;
     width: 100%;
 }
-.content .content-left{
+.content .content-right{
     display: block;
     width: 100%;
+    margin-left: 150px
+   
 }
-.content .content-left .info{
+.content .content-right .info{
     max-width: 100%;
     color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
+    justify-content: right;
+   
+   
+    
 }
-.content .content-left .info h2{
+.content .content-right .info h2{
     font-size: 60px;
     font-family: sans-serif;
     margin-bottom: 30px; 
 }
-.content .content-left .info p{
+.content .content-right .info p{
     font-size: 20px;
     line-height: 2pc;
     margin-bottom: 30px;
     font-family: sans-serif;
 }
-.content .content-left button{
+.content .content-right button{
     padding: 10px 23px;
     background-color:rgb(255, 130, 6);
     color: rgb(255, 255, 255);
     border-radius: 5px;
     cursor: pointer;
 }
-.content .content-right{
+.content .content-left{
     display: block;
     width: 50%;
 }
-.content .content-right img{
-    width: 700px;
+.content .content-left img{
+    width: 400px;
     height: auto;
     display: flex;
-    margin-left: 220%;
-    margin-top: -350px;
+    margin-left: -72%;
+    margin-top: -450px;
     position: relative;
     user-select: none;
-    animation: rotate 10s linear infinite;
-    transform: scaleX(-1);
+    rotate: 10deg;
+   
+    
 }
 /*
 @keyframes rotate {
@@ -188,14 +195,14 @@ input{
 }
 .content .bee{
     display: block;
-    width: 50%;
+    width: 20%;
 }
 .content .bee img{
-    width: 400px;
+    width: 200px;
     height: auto;
     display: flex;
-    margin-left: -88%;
-    margin-top: -150px;
+    margin-left: 920%;
+    margin-top: -200px;
     position: relative;
     user-select: none;
     rotate: 20deg;
@@ -216,7 +223,7 @@ input{
 .dis1 p
 {
     margin-top: -250px;
-    margin-left: 100px;
+    margin-left: 70px;
 }
 .dis2{
     font: size 13px;
