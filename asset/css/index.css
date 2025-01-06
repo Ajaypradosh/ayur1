@@ -107,8 +107,11 @@ body {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 831ce46f42a13f4b82f61593fc36c2c4eaf8a739
 /* Content Section */
+>>>>>>> 78f1a65e60482dbe6f025dc8fd1041687ad673f3
 .content {
     padding: 60px 40px;
     text-align: center;
@@ -116,8 +119,11 @@ body {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 831ce46f42a13f4b82f61593fc36c2c4eaf8a739
+>>>>>>> 78f1a65e60482dbe6f025dc8fd1041687ad673f3
         .hero-text {
             margin-top: 30px;
             position: relative;
@@ -130,8 +136,12 @@ body {
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> b728e89091e2afb337a15f873566dda9fc3f5b60
 >>>>>>> 831ce46f42a13f4b82f61593fc36c2c4eaf8a739
+>>>>>>> 78f1a65e60482dbe6f025dc8fd1041687ad673f3
 
 .content h2 {
     color: #2d2d2d;
@@ -177,7 +187,11 @@ body {
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 >>>>>>> 831ce46f42a13f4b82f61593fc36c2c4eaf8a739
+>>>>>>> 78f1a65e60482dbe6f025dc8fd1041687ad673f3
 .imgbox:hover {
     transform: translateY(-5px); /* Slight lift effect on hover */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* More intense shadow for hover effect */
@@ -185,8 +199,12 @@ body {
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 =======
 >>>>>>> 831ce46f42a13f4b82f61593fc36c2c4eaf8a739
+>>>>>>> 78f1a65e60482dbe6f025dc8fd1041687ad673f3
         /* Image Box */
         .imgbox {
             width: 95%;
@@ -204,8 +222,12 @@ body {
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> b728e89091e2afb337a15f873566dda9fc3f5b60
 >>>>>>> 831ce46f42a13f4b82f61593fc36c2c4eaf8a739
+>>>>>>> 78f1a65e60482dbe6f025dc8fd1041687ad673f3
 
 .imgbox img:hover {
     transform: scale(1.05);
