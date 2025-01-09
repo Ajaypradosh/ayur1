@@ -1,0 +1,258 @@
+*,::after,::before{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 100px;
+    background-color: #ffffff;
+    position: relative;
+}
+body::before{
+    content: "";
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 150%;
+    height: 150%;
+    background-image: url(/asset/image/cardomomb.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.03;
+    z-index: -1;
+}
+
+
+
+input{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+
+}
+
+.info h1{
+
+    font-size: 50px;
+    font-family: sans-serif;
+    margin-bottom: -10px;
+    color: rgb(17, 126, 41);
+}
+.info p{
+    font-size: 20px;
+    line-height: 2pc;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.explore{
+    background-color: rgb(247, 99, 0);
+    color: aliceblue;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.content{
+    display: grid;
+    grid-template-columns: 50%;
+    gap: 30px;
+    margin-top: 120px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.content .content-left{
+    display: block;
+    width: 100%;
+}
+.content .content-left .info{
+    max-width: 100%;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+.content .content-left .info h2{
+    font-size: 60px;
+    font-family: sans-serif;
+    margin-bottom: 30px; 
+}
+.content .content-left .info p{
+    font-size: 20px;
+    line-height: 2pc;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+.content .content-left button{
+    padding: 10px 23px;
+    background-color:rgb(255, 130, 6);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.content .content-right{
+    display: block;
+    width: 50%;
+}
+.content .content-right img{
+    width: 700px;
+    height: auto;
+    display: flex;
+    margin-left: 220%;
+    margin-top: -350px;
+    position: relative;
+    user-select: none;
+    animation: rotate 10s linear infinite;
+    transform: scaleX(-1);
+}
+/*
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}*/
+.category{
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: -50px;
+    justify-content: center;
+}
+.category .list-items{
+    width: 90%;
+    position: relative;
+    margin-top: 50px;
+    color: aliceblue;
+}
+.category .list-items h3{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-bottom: 70px;
+}
+.category .list-items .card-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.category .card-list .card{
+    width: 200px;
+    height: auto;
+    display: block;
+    padding: 10px;
+    margin-top: 100px;
+    position: relative;
+    background: #000000;
+    outline: 2px solid #faad96;
+    border-radius: 5px;
+}
+.category .card-list .card img{
+    width: 100px;
+    height: auto;
+    bottom: 140px;
+    left: 50px;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    border-radius: 50%;
+}
+.category .card-list .card .food-title{
+    padding: 50px 0;
+}
+.category .card-list .card .food-title h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: sans-serif;
+
+
+}
+.category .card .desc-food p{
+    font-size: 13px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+.category .card .price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.category .card .price span .plus-icon{
+    color: #ff511c;
+    font-size: 20px;
+    cursor: pointer;
+}
+.content .bee{
+    display: block;
+    width: 50%;
+}
+.content .bee img{
+    width: 400px;
+    height: auto;
+    display: flex;
+    margin-left: -88%;
+    margin-top: -150px;
+    position: relative;
+    user-select: none;
+    rotate: 20deg;
+ 
+
+}
+.dis1{
+    font: size 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 0, 0);
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    text-align: left;
+    flex-direction: column;
+}
+.dis1 p
+{
+    margin-top: -250px;
+    margin-left: 100px;
+}
+.dis2{
+    font: size 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 0, 0);
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+.dis3{
+    font: size 13px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 0, 0);
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+.dis4{
+    font: size 13px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 0, 0);
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -3,93 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Ayur Spices Cardamom</title>
+    <title>About Us - Ayur Spices</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        /* Custom Header Styling */
+        .navbar {
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #ffffff00 0%, #7e505000 100%);
+        }
 
+        /* Adjusted Logo Styling */
+        .logo img {
+            height: 50px; /* Adjusted height */
+            filter: drop-shadow(2px 4px 6px rgba(255, 255, 255, 0.186));
+        }
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Google Fonts import (Lora & Playfair Display for premium look) -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="asset/css/about.css">
-    <link rel="stylesheet" href="asset/css/index.css">
+        /* Navigation Menu Styling */
+        .nav-link {
+            color: #376701;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 1.1em;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            transition: color 0.3s, transform 0.2s;
+            position: relative;
+        }
 
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #d4af37;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s;
+        }
 
+        .nav-link:hover {
+            color: #000000;
+            transform: translateY(-2px);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #426644;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .social-media a {
+            font-weight: bold;
+            font-size: medium;
+            color: whitesmoke;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+            margin: 0 10px;
+        }
+
+        .social-media .facebook:hover { color: rgb(17, 153, 194); }
+        .social-media .instagram:hover { color: rgb(248, 86, 221); }
+        .social-media .twitter:hover { color: rgb(17, 153, 194); }
+        .social-media .whatsapp:hover { color: rgb(45, 233, 70); }
+    </style>
 </head>
 <body>
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="index.html">
+                    <img src="asset/image/ayurlogo.png" alt="Ayur Spices">
+                </a>
 
-<header  id="header" class="">
-</header>
+                <!-- Responsive Toggle Button for Mobile Devices -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
+                <!-- Collapsible Navigation -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav text-end">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="achievement.html" class="nav-link">Achievements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-
-<main>
-    <section class="introduction fade-in">
-        <h2>The Origins of the Idukki's Best Cardamom & Spices</h2>
-        <p>Ayur Spices pioneered its order for the premium cardamom and Spices they provide...</p>
-    </section>
-
-    <div class="hero-section fade-in">
-        <img src="asset/image/cardamom.jpg" alt="Background Image">
-        <p>The Ayur Spices brand provides the best Spices to their customers.<br>
-            Our first class grading processes ensure that we deliver only the best quality spices to our customers.
+    <!-- About Section -->
+    <section class="container my-5">
+        <h2 class="text-center">About Ayur Spices</h2>
+        <p class="text-center">
+            At Ayur Spices, we believe in the power of nature. Our mission is to provide the highest quality spices sourced from the best farms. With a commitment to sustainability and quality, we ensure that every product is a testament to our dedication to excellence.
         </p>
-    </div>
-
-    <section class="introduction fade-in">
-        <h2>Here we ensure that our products are of the best quality</h2>
-        <p>For the processes we get our customer to verify the quality we provide</p>
+        <p class="text-center">
+            Our team is passionate about spices and their benefits, and we strive to share this passion with our customers. Join us on this flavorful journey!
+        </p>
     </section>
 
-    <div class="hero-section1 fade-in">
-        <img src="asset/image/cardamom.png" alt="Background Image">
-        <p>Cardamom, often called the "Queen of Spices," is a highly aromatic spice<br> Our best products are our gurante for our customers. </p>
-    </div>
-    <section class="introduction fade-in">
-        <h2>Its not just Cardamom</h2>
-        <p>Ayur Spices have their reputation to provide best quality Spices in Whole of Idukki...</p>
+    <!-- Footer Section -->
+    <footer class="text-center">
+        <!-- Footer Text -->
+        <p class="mb-3">&copy; 2024 Ayur Spices. All rights reserved.</p>
         
-    </section>
-
-    <div class="hero-section fade-in">
-        <img src="asset/image/cardamom.jpg" alt="Background Image">
-        
-        <p>Here we provide the best kind of spices to our customers<br>
-        We provide them us with best quality and best prices</p>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
-
-    <section class="certification fade-in">
-        <h2>Certified as the Idukki's Best Cardamom</h2>
-        <div class="certification-cards">
-            <div class="certificate">
-                <img src="asset/image/quality.jpg" alt="Certification 1">
-            </div>
-            <div class="certificate">
-                <img src="asset/image/natural.jpg" alt="Certification 2">
-            </div>
+        <!-- Social Media Links -->
+        <div class="social-media mb-3 d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#" class="facebook d-flex align-items-center gap-2">
+                <i class="bx bxl-facebook-square"></i> Facebook
+            </a>
+            <a href="#" class="instagram d-flex align-items-center gap-2">
+                <i class="bx bxl-instagram"></i> Instagram
+            </a>
+            <a href="#" class="twitter d-flex align-items-center gap-2">
+                <i class="bx bxl-twitter"></i> Twitter
+            </a>
+            <a href="#" class="whatsapp d-flex align-items-center gap-2">
+                <i class="bx bxl-whatsapp"></i> WhatsApp
+            </a>
         </div>
-    </section>
 
+        <!-- Footer Navigation Links -->
+        <div class="footer-nav d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+            <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+        </div>
+    </footer>
 
-</main>
-
-<footer id="footer">
-</footer>
-<script src="asset/js/function.js"></script>
-<script src="asset/js/about.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
