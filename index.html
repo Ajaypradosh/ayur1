@@ -97,7 +97,33 @@
         .social-media .twitter:hover { color: rgb(17, 153, 194); }
         .social-media .whatsapp:hover { color: rgb(45, 233, 70); }
 
+        /* Custom styles for card text */
+        .card-text {
+            max-height: 75px; /* Adjusted maximum height for 3 lines */
+            overflow: hidden; /* Hide overflow */
+            text-overflow: ellipsis; /* Add ellipsis for overflow text */
+            display: -webkit-box; /* For webkit browsers */
+            -webkit-line-clamp: 3; /* Limit to 3 lines */
+            -webkit-box-orient: vertical; /* Vertical orientation */
+        }
 
+        /* Hover effect for cards */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Scale the card slightly */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        }
+
+        .card-img-top {
+            transition: transform 0.3s ease; /* Smooth transition for image */
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.1); /* Scale the image slightly on hover */
+        }
 
     </style>
 </head>
@@ -150,7 +176,7 @@
     <!-- Content Section -->
     <section class="content py-5">
         <div class="container">
-            <h2 class="mb-4">The Magic of Spices: A Gift from Nature</h2>
+            <h2 class="d-flex mb-4 justify-content-center">The Magic of Spices: A Gift from Nature</h2>
             <p>
                 At Ayur Spices, we bring you the finest spices grown in the pristine hills of Idukki, a region renowned for its rich biodiversity and fertile lands. Sourced directly from the heart of nature, our spices are a harmonious blend of purity, flavor, and unmatched quality. Each spice in our collection tells a story of tradition, care, and excellence. Whether you’re elevating your culinary creations or seeking natural remedies for wellness, Ayur Spices is your trusted partner in delivering nature’s magic to your doorstep. From the bold aroma of black pepper to the delicate sweetness of nutmeg mace, every spice reflects the essence of Idukki, making them perfect for every occasion, from daily cooking to thoughtful gifting. Discover the enchanting world of spices and experience the authentic taste and goodness that only nature can offer.
             </p>
@@ -165,41 +191,47 @@
 
             <!-- card No. 1 -->
             <div class="col-12 col-md-4 mb-4">
-                <div class="card" style="width: 100%; height: 100%;">
-                    <img src="asset/image/cardamom.jpg" class="card-img-top img-fluid" alt="Black Pepper Image">
-                    <div class="card-body">
-                        <p class="card-text">
-                            <h3>Black Pepper</h3> Black Pepper
-                            Known as the "King of Spices," black pepper is cherished for its bold, earthy flavor and sharp aroma. Sourced from the lush plantations of Idukki, our pepper enhances the taste of any dish while offering numerous health benefits, such as aiding digestion and boosting immunity.
-                        </p>
+                <a href="pepper.html" target="_blank" class="text-decoration-none">
+                    <div class="card" style="width: 100%; height: 100%;">
+                        <img src="asset/image/cardamom.jpg" class="card-img-top img-fluid" alt="Black Pepper Image">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h3>Black Pepper</h3> Black Pepper
+                                Known as the "King of Spices," black pepper is cherished for its bold, earthy flavor and sharp aroma. Sourced from the lush plantations of Idukki, our pepper enhances the taste of any dish while offering numerous health benefits, such as aiding digestion and boosting immunity.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- card No. 2 -->
             <div class="col-12 col-md-4 mb-4">
-                <div class="card" style="width: 100%; height: 100%;">
-                    <img src="asset/image/cardamom.jpg" class="card-img-top img-fluid" alt="Cardamom Image">
-                    <div class="card-body">
-                        <p class="card-text">
-                            <h3>Cardamom</h3> Cardamom
-                            Known for its sweet and spicy flavor, cardamom is often used in both sweet and savory dishes. It is also celebrated for its health benefits, including digestive support and anti-inflammatory properties.
-                        </p>
+                <a href="cardomom1.html" target="_blank" class="text-decoration-none">
+                    <div class="card" style="width: 100%; height: 100%;">
+                        <img src="asset/image/cardamom.jpg" class="card-img-top img-fluid" alt="Cardamom Image">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h3>Cardamom</h3> Cardamom
+                                Known for its sweet and spicy flavor, cardamom is often used in both sweet and savory dishes. It is also celebrated for its health benefits, including digestive support and anti-inflammatory properties.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- card No. 3 -->
             <div class="col-12 col-md-4 mb-4">
-                <div class="card" style="width: 100%; height: 100%;">
-                    <img src="asset/image/cardamom.jpg" class="card-img-top img-fluid" alt="Cinnamon Image">
-                    <div class="card-body">
-                        <p class="card-text">
-                            <h3>Cinnamon</h3> Cinnamon
-                            A popular spice known for its sweet and warm flavor, cinnamon is often used in desserts and beverages. It also has numerous health benefits, including anti-inflammatory and antioxidant properties.
-                        </p>
+                <a href="cinnamon.html" target="_blank" class="text-decoration-none">
+                    <div class="card" style="width: 100%; height: 100%;">
+                        <img src="asset/image/cardamom.jpg" class="card-img-top img-fluid" alt="Cinnamon Image">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h3>Cinnamon</h3> Cinnamon
+                                A popular spice known for its sweet and warm flavor, cinnamon is often used in desserts and beverages. It also has numerous health benefits, including anti-inflammatory and antioxidant properties.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
 
@@ -207,41 +239,47 @@
         <div class="row mt-3 mb-4">
             <!-- card No. 1 -->
             <div class="col-12 col-md-4 mb-4">
-                <div class="card" style="width: 100%; height: 100%;">
-                    <img src="asset/image/cardamom.jpg" class="card-img-top img-fluid" alt="Turmeric Image">
-                    <div class="card-body">
-                        <p class="card-text">
-                            <h3>Turmeric</h3> Turmeric
-                            Known for its vibrant color and health benefits, turmeric is a staple in many cuisines. It is praised for its anti-inflammatory and antioxidant properties.
-                        </p>
+                <a href="turmeric.html" target="_blank" class="text-decoration-none">
+                    <div class="card" style="width: 100%; height: 100%;">
+                        <img src="asset/image/cardamom.jpg" class="card-img-top img-fluid" alt="Turmeric Image">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h3>Turmeric</h3> Turmeric
+                                Known for its vibrant color and health benefits, turmeric is a staple in many cuisines. It is praised for its anti-inflammatory and antioxidant properties.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- card No. 2 -->
             <div class="col-12 col-md-4 mb-4">
-                <div class="card" style="width: 100%; height: 100%;">
-                    <img src="asset/image/cardamom.jpg" class="card-img-top img-fluid" alt="Ginger Image">
-                    <div class="card-body">
-                        <p class="card-text">
-                            <h3>Ginger</h3> Ginger
-                            A versatile spice known for its spicy and aromatic flavor, ginger is used in various dishes and is known for its digestive benefits.
-                        </p>
+                <a href="ginger.html" target="_blank" class="text-decoration-none">
+                    <div class="card" style="width: 100%; height: 100%;">
+                        <img src="asset/image/cardamom.jpg" class="card-img-top img-fluid" alt="Ginger Image">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h3>Ginger</h3> Ginger
+                                A versatile spice known for its spicy and aromatic flavor, ginger is used in various dishes and is known for its digestive benefits.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- card No. 3 -->
             <div class="col-12 col-md-4 mb-4">
-                <div class="card" style="width: 100%; height: 100%;">
-                    <img src="asset/image/cardamom.jpg" class="card-img-top img-fluid" alt="Cumin Image">
-                    <div class="card-body">
-                        <p class="card-text">
-                            <h3>Cumin</h3> Cumin
-                            Cumin is known for its distinctive flavor and is commonly used in spice blends. It is also recognized for its digestive benefits.
-                        </p>
+                <a href="cumin.html" target="_blank" class="text-decoration-none">
+                    <div class="card" style="width: 100%; height: 100%;">
+                        <img src="asset/image/cardamom.jpg" class="card-img-top img-fluid" alt="Cumin Image">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h3>Cumin</h3> Cumin
+                                Cumin is known for its distinctive flavor and is commonly used in spice blends. It is also recognized for its digestive benefits.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
