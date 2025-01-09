@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header with Functional Toggle</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Custom Header Styling */
+        .navbar {
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #ffffff00 0%, #7e505000 100%);
+        }
+
+        /* Logo Styling */
+        .logo img {
+            height: 70px;
+            filter: drop-shadow(2px 4px 6px rgba(255, 255, 255, 0.186));
+        }
+
+        /* Navigation Menu Styling */
+        .nav-link {
+            color: #376701;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 1.1em;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            transition: color 0.3s, transform 0.2s;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: transparent; /* Make the line transparent */
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #000000;
+            transform: translateY(-2px);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Remove focus outline for navbar toggler */
+        .navbar-toggler:focus,
+        .nav-link:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        /* Remove outline for links inside navbar */
+        .navbar-nav .nav-link:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="#">
+                    <img src="asset/image/ayurlogo.png" alt="Ayur Spices">
+                </a>
+
+                <!-- Responsive Toggle Button for Mobile Devices -->
+                <button class="navbar-toggler bg-primary border-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible Navigation -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav text-end">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="achievements.html" class="nav-link">Achievements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Bootstrap and JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggler = document.querySelector('.navbar-toggler');
+            var togglerIcon = toggler.querySelector('i');
+
+            toggler.addEventListener('click', function() {
+                if (toggler.classList.contains('collapsed')) {
+                    togglerIcon.classList.remove('fa-times');
+                    togglerIcon.classList.add('fa-bars');
+                } else {
+                    togglerIcon.classList.remove('fa-bars');
+                    togglerIcon.classList.add('fa-times');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

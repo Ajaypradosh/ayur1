@@ -59,7 +59,7 @@
     transition: width 0.3s;
 }
 
-@media screen and (min-width: 975px) {
+@media screen and (max-width: 975px) {
     .nav-link::after {
         display: none; /* Hides the pseudo-element entirely */
     }
@@ -115,6 +115,9 @@
                 <!-- Collapsible Navigation -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav text-end">
+                        <li class="nav-item">
+                            <hr class="d-lg-none" />
+                          </li>
                         <li class="nav-item">
                             <a href="index.html" class="nav-link">Home</a>
                         </li>
