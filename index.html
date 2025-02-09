@@ -166,12 +166,22 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero position-relative" id="hero" style="height: 400px; background-size: cover;">
+    <section class="hero position-relative" id="hero" style="height: 400px; overflow: hidden;">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline class="position-absolute w-100 h-100" style="object-fit: cover;">
+            <source src="your-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+        <!-- Dark Overlay -->
         <div class="overlay position-absolute w-100 h-100" style="background: rgba(0, 0, 0, 0.5);"></div>
+    
+        <!-- Text Content -->
         <div class="hero-text text-white text-center position-absolute w-100 d-flex align-items-center justify-content-center" style="height: 100%;">
             <h2>Welcome to Ayur Spices</h2>
         </div>
     </section>
+    
 
     <!-- Content Section -->
     <section class="content py-5">
