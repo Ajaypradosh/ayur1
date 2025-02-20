@@ -1,51 +1,53 @@
-let listBg = document.querySelectorAll('.bg');
-let banner = document.querySelector('.banner');
-let tabs = document.querySelectorAll('.tab');
-let container = document.querySelector('.container');
-let heightDefault = container.offsetHeight;
-let topBefore = 0;
-let body = document.querySelector('body');
+$(document).ready(function() {
+    let $listBg = $('.bg');
+    let $banner = $('.banner');
+    let $tabs = $('.tab');
+    let $container = $('.container');
+    let heightDefault = $container.outerHeight();
+    let topBefore = 0;
+    let $body = $('body');
 
-window.addEventListener('wheel', function(event){
-    event.preventDefault();
-    const scrollSpeed = 0.2;
-    const scrollValue = window.scrollY + (event.deltaY/3) * scrollSpeed;
-    window.scrollTo(0, scrollValue);
+    $(window).on('wheel', function(event) {
+        event.preventDefault();
+        const scrollSpeed = 0.2;
+        const scrollValue = $(window).scrollTop() + (event.originalEvent.deltaY / 3) * scrollSpeed;
+        $('html, body').scrollTop(scrollValue);
 
-
-
-    let top = scrollValue;
-    listBg.forEach((bg, index) => {
-        if(index != 0){
-            bg.animate({
-                transform: `translateY(${(-top*index)}px)`
-            }, { duration: 1000, fill: "forwards" });
-        }
-        if(index == listBg.length - 1){
-            tabs.forEach(tab => {
-                tab.animate({
-                    transform: `translateY(${(-top*index)}px)`
-                }, { duration: 500, fill: "forwards" });
-            })
-
-            if(topBefore < top){
-                setHeight = heightDefault-window.scrollY*index;
-                container.animate({
-                    height: `${(setHeight + 100)}px`
-                }, { duration: 50, fill: "forwards" });
-                topBefore = window.scrollY;
+        let top = scrollValue;
+        $listBg.each(function(index) {
+            if (index !== 0) {
+                $(this).css({
+                    'transform': `translateY(${(-top * index)}px)`,
+                    'transition': 'transform 1s ease-in-out'
+                });
             }
-        }
-        tabs.forEach((tab, index) => {
-            // console.log(tab.offsetTop - top, window.innerHeight);
-            if((tab.offsetTop - top) <= window.innerHeight*(index+1)){
-                let content = tab.getElementsByClassName('content')[0];
-                let transformContent = window.innerHeight*(index+1) - (tab.offsetTop - top);
-                console.log(tab);
-                content.animate({
-                    transform: `translateY(${(-transformContent + (100*index))}px)`
-                }, { duration: 500, fill: "forwards" });
+            if (index === $listBg.length - 1) {
+                $tabs.each(function() {
+                    $(this).css({
+                        'transform': `translateY(${(-top * index)}px)`,
+                        'transition': 'transform 0.5s ease-in-out'
+                    });
+                });
+
+                if (topBefore < top) {
+                    let setHeight = heightDefault - $(window).scrollTop() * index;
+                    $container.css({
+                        'height': `${(setHeight + 100)}px`,
+                        'transition': 'height 0.05s ease-in-out'
+                    });
+                    topBefore = $(window).scrollTop();
+                }
             }
-        })
-    })
-}, { passive: false });
+            $tabs.each(function(index) {
+                if (($(this).offset().top - top) <= $(window).height() * (index + 1)) {
+                    let $content = $(this).find('.content').first();
+                    let transformContent = $(window).height() * (index + 1) - ($(this).offset().top - top);
+                    $content.css({
+                        'transform': `translateY(${(-transformContent + (100 * index))}px)`,
+                        'transition': 'transform 0.5s ease-in-out'
+                    });
+                }
+            });
+        });
+    });
+});
