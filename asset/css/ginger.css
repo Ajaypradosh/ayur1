@@ -1,0 +1,264 @@
+*,::after,::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 100px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    background-image: url(/asset/image/gingerbg.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.03;
+    z-index: -1;
+}
+
+input {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.info h1 {
+    font-size: 50px;
+    font-family: sans-serif;
+    margin-bottom: -10px;
+    color: rgb(165, 89, 30); /* Ginger-toned brown */
+}
+
+.info p {
+    font-size: 16px;
+    line-height: 2pc;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.explore {
+    background-color: rgb(184, 134, 11); /* Warm ginger tone */
+    color: aliceblue;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 50%;
+    gap: 30px;
+    margin-top: 120px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content .content-right {
+    display: block;
+    width: 100%;
+    margin-left: 150px;
+}
+
+.content .content-right .info {
+    max-width: 100%;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+.content .content-right .info h2 {
+    font-size: 60px;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+}
+
+.content .content-right .info p {
+    font-size: 20px;
+    line-height: 2pc;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+
+.content .content-right button {
+    padding: 10px 23px;
+    background-color: rgb(184, 134, 11); /* Ginger tone */
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content .content-left {
+    display: block;
+    width: 50%;
+}
+
+.content .content-left img {
+    width: 400px;
+    height: auto;
+    display: flex;
+    margin-left: -72%;
+    margin-top: -450px;
+    position: relative;
+    user-select: none;
+    rotate: 10deg;
+    content: url("/asset/image/dropginger.png");
+}
+
+.category {
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: -50px;
+    justify-content: center;
+}
+
+.content .bee {
+    display: block;
+    width: 20%;
+}
+
+.content .bee img {
+    width: 200px;
+    height: auto;
+    display: flex;
+    margin-left: 920%;
+    margin-top: -200px;
+    position: relative;
+    user-select: none;
+    rotate: 20deg;
+    content: url("/asset/image/ginger2.png");
+}
+
+.dis1, .dis2, .dis3, .dis4 {
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 0, 0);
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+
+@media screen and (max-width: 1024px) {
+    body {
+        margin: 0 50px;
+    }
+
+    .info h1 {
+        font-size: 40px;
+    }
+
+    .content {
+        grid-template-columns: 100%;
+        text-align: center;
+    }
+
+    .content .content-left {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .content .content-left img {
+        width: 300px;
+        margin-left: 0;
+        margin-top: -100px;
+    }
+
+    .content .content-right {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .content .content-right .info h2 {
+        font-size: 50px;
+    }
+
+    .content .bee img {
+        width: 150px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: -150px;
+    }
+
+    .dis1, .dis2, .dis3, .dis4 {
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0 30px;
+    }
+
+    .info h1 {
+        font-size: 30px;
+    }
+
+    .info p {
+        font-size: 14px;
+    }
+
+    .content {
+        margin-top: 80px;
+    }
+
+    .content .content-left img {
+        width: 250px;
+        margin-top: -50px;
+    }
+
+    .content .content-right .info h2 {
+        font-size: 40px;
+    }
+
+    .content .bee img {
+        width: 120px;
+        margin-top: -120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        margin: 0 20px;
+    }
+
+    .info h1 {
+        font-size: 25px;
+    }
+
+    .info p {
+        font-size: 12px;
+    }
+
+    .content .content-right .info h2 {
+        font-size: 35px;
+    }
+
+    .content .content-left img {
+        width: 200px;
+    }
+
+    .content .bee img {
+        width: 100px;
+    }
+
+    .dis1, .dis2, .dis3, .dis4 {
+        font-size: 12px;
+    }
+}
