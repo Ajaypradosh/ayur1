@@ -9,10 +9,9 @@
 
 
 function learnMore() {
-    console.log("Learn More");
+    // console.log("Learn More");
     window.location.href = "idukki.html";
 }
-
 $(document).ready(function() {
     $('#emailbtn').click(function() {
         console.log('clicked');
@@ -46,6 +45,8 @@ $(document).ready(function() {
                 confirmButtonText: 'Ok'
             });
             $('#emailinput').removeClass('border border-danger');
+            $('#message').addClass('border border-danger');
+
         } else {
             Swal.fire({
                 title: 'Error!',
