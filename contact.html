@@ -12,6 +12,25 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <style>
+
+.popup-loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: transparent;
+            padding: 20px;
+            /* border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+            display: none; /* Initially hidden */
+            z-index: 1000;
+        }
+        .popup-loader img {
+            width: 200px;
+            height: auto;
+        }
+
+
         /* Custom Header Styling */
         .navbar {
             padding: 15px 20px;
@@ -166,7 +185,7 @@
 
                         <div class="form-group">
                             <label for="formName">Name</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name" required>
+                            <input type="text" class="form-control" id="formName" placeholder="Name" required>
                           </div>
             
                         <!-- Message Input (Textarea) -->
@@ -236,6 +255,29 @@
 
     </div>
 </div>
+
+
+    
+</div>
+
+
+
+
+
+
+<div id="loader" class="popup-loader">
+    <img src="asset/video/loading.gif" alt="Loading...">
+</div>
+
+
+
+
+
+
+
+
+
+
     <!-- Footer Section -->
     <footer class="text-center">
         <!-- Footer Text -->
@@ -263,6 +305,16 @@
             <a href="#" class="text-white text-decoration-none">Terms of Service</a>
         </div>
     </footer>
+
+
+   
+
+
+
+
+
+
+
     <!-- swal -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script  src='asset/js/function.js'></script>

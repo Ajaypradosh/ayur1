@@ -15,11 +15,19 @@ $mail = new PHPMailer(true);
 if (isset($_POST['email'])) {
     $email = $_POST['email'];
     $message = $_POST['message'];
+    $name = $_POST['name'];
     // echo "kajbsk";
-     echo sendMail($email, $message ,$mail);
+    //  echo 
+     sendMail($email, $message ,$mail , $name);
+    //  echo "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa".$res; 
+    //  echo sendMail($email, $message ,$mail , $name);
 }
 
- function sendMail($email, $message , $mail){
+ function sendMail($email, $message ,$mail ,$name){
+
+    $res = [
+        'status'=> true,
+        ];
     
     // ec?ho "kajbsk";
 
@@ -29,13 +37,13 @@ if (isset($_POST['email'])) {
         $mail->Host = 'smtp.gmail.com'; // Change this to your mail server
         $mail->SMTPAuth = true;
         $mail->Username = 'bcacompilers@gmail.com'; // Your email
-        $mail->Password = 'xoxxo dgfc bahz xbxv'; // Your email password
+        $mail->Password = 'etnu jgxw dztg pxze'; // Your email password
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
     
         // Email Settings
-        $mail->setFrom('donbinoy25@gmail.com', 'don');
-        $mail->addAddress('donbinoy25@gmail.com', 'don');
+        $mail->setFrom('bcacompilers@gmail.com', 'admin');
+        $mail->addAddress($email, $name);
         $mail->Subject = 'Test Email';
         $mail->Body = 'This is a test email sent without Composer!';
         
@@ -45,10 +53,10 @@ if (isset($_POST['email'])) {
 
         if($mail->send()){
         // echo "aaaaaaaaaaaaaaaaaaa <br>";
-        return 'Email sent successfully!';
+        echo 'success';
     } else {
         // echo "bbbbbbbbbbbbbbbbbbb <br>";
-        return 'Failed to send email. Error: ' . $mail->ErrorInfo;
+        echo 'failed';
     }
 } catch (Exception $e) {
     // echo "ccccccccccccccccccccccc <br>";
