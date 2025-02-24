@@ -5,7 +5,7 @@ $(document).ready(function() {
     let ticking = false;
 
     $(window).on('wheel', function(event) {
-        event.preventDefault(); // Prevent default scrolling
+        event.preventDefault(); // Prevent defaultt scrolling
 
         let delta = event.originalEvent.deltaY;
         let scrollSpeed = 0.4; // Adjusted for better smoothness

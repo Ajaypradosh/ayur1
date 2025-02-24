@@ -47,7 +47,7 @@ if (isset($_POST['email'])) {
         // echo "aaaaaaaaaaaaaaaaaaa <br>";
         return 'Email sent successfully!';
     } else {
-        // echo "bbbbbbbbbbbbbbbbbbb <br>";
+        // echo "bbbbbbbbbbbbbbbbbbbb <br>";
         return 'Failed to send email. Error: ' . $mail->ErrorInfo;
     }
 } catch (Exception $e) {
