@@ -6,7 +6,7 @@
 body{
     margin: 0 100px;
     position: absolute;
-    background-image: url('/asset/image/pepperba.jpg');
+    background-image: url('asset/image/pepperba.jpg');
     background-size: cover;
 }
 body::before{
