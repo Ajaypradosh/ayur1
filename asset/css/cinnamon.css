@@ -30,7 +30,7 @@ body::before {
     font-size: 40px;
     font-family: sans-serif;
     margin-bottom: -10px;
-    color: rgb(150, 75, 0); /* Cinnamon-likee brown */
+    color: rgb(150, 75, 0); /* Cinnamon-like brown */
     display: inline-block;
 }
 

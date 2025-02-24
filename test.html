@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Doughnut Chart</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Center Chart */
+        #chart-container {
+            width: 300px;  /* Adjust size */
+            height: 300px;
+            margin: auto;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="chart-container">
+        <canvas id="bankChart"></canvas>
+    </div>
+    <button id="updateChart">Update Data</button>
+
+    <script>
+        $(document).ready(function () {
+            // Initial Banking Data
+            let bankingData = {
+                labels: ["Investment", "Due Amount", "Account Balance"],
+                datasets: [{
+                    data: [5000, 2000, 8000], // Sample values
+                    backgroundColor: ["#36A2EB", "#FF6384", "#4BC0C0"]
+                }]
+            };
+
+            // Create Doughnut Chart
+            let ctx = document.getElementById("bankChart").getContext("2d");
+            let bankChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: bankingData,
+                options: {
+                    responsive: false,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: "bottom"
+                        }
+                    }
+                }
+            });
+
+            // Function to Update Chart with Random Data
+            function updateBankChart() {
+                bankingData.datasets[0].data = [
+                    Math.floor(Math.random() * 10000), // Investment
+                    Math.floor(Math.random() * 5000),  // Due Amount
+                    Math.floor(Math.random() * 15000)  // Account Balance
+                ];
+                console.log(bankingData)
+                bankChart.update(); // Refresh chart
+            }
+
+            // Update Chart on Button Click
+            $("#updateChart").click(function () {
+                updateBankChart();
+            });
+        });
+    </script>
+
+</body>
+</html>
