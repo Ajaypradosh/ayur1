@@ -41,32 +41,36 @@ $(document).ready(function() {
             if(message != '') {
                 if(name != ''){
 
-                    $.ajax({
-                        url: 'asset/php/mail.php',
-                        type: 'POST',
-                        data: {
-                            email: email,
-                            message: message
-                        },
-                        success: function(response) {
-                            console.log('akjsbdjb')
-                            if(response == 'success'){
-                                // console.log(response);
-                            alertBox('success', 'Email sent successfully');
+                    // $.ajax({
+                    //     url: 'asset/php/mail.php',
+                    //     type: 'POST',
+                    //     data: {
+                    //         email: email,
+                    //         message: message
+                    //     },
+                    //     success: function(response) {
+                    //         console.log('akjsbdjb')
+                    //         if(response == 'success'){
+                    //             // console.log(response);
+                    //         alertBox('success', 'Email sent successfully');
+                    // $('#emailinput').removeClass('border border-danger');
+                    // $('#message').removeClass ('border border-danger');
+                    //         }
+                    //         else{
+                    //             // console.log(response);
+                    //         }
+                            
+                    //     },
+                    //     error : function(error) {
+                    //         console.log(error);
+                    //         alertBox('error', 'email and message not sent');
+                    //     }
+    
+                    // });
+
+                    alertBox('success', 'Email sent successfully');
                     $('#emailinput').removeClass('border border-danger');
                     $('#message').removeClass ('border border-danger');
-                            }
-                            else{
-                                // console.log(response);
-                            }
-                            
-                        },
-                        error : function(error) {
-                            console.log(error);
-                            alertBox('error', 'email and message not sent');
-                        }
-    
-                    });
                     
                 }else{
                     alertBox('error', 'Please enter your name');

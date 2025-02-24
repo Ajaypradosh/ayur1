@@ -15,7 +15,7 @@ $mail = new PHPMailer(true);
 if (isset($_POST['email'])) {
     $email = $_POST['email'];
     $message = $_POST['message'];
-    echo "kajbsk";
+    // echo "kajbsk";
      echo sendMail($email, $message ,$mail);
 }
 
@@ -44,14 +44,14 @@ if (isset($_POST['email'])) {
         // echo "jfhbvhdf";exit;
 
         if($mail->send()){
-        echo "aaaaaaaaaaaaaaaaaaa <br>";
+        // echo "aaaaaaaaaaaaaaaaaaa <br>";
         return 'Email sent successfully!';
     } else {
-        echo "bbbbbbbbbbbbbbbbbbb <br>";
+        // echo "bbbbbbbbbbbbbbbbbbb <br>";
         return 'Failed to send email. Error: ' . $mail->ErrorInfo;
     }
 } catch (Exception $e) {
-    echo "ccccccccccccccccccccccc <br>";
+    // echo "ccccccccccccccccccccccc <br>";
     return 'Failed to send email. Exception: ' . $e->getMessage();
 }
 }
