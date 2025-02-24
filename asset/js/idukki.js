@@ -1,53 +1,52 @@
 $(document).ready(function() {
     let $listBg = $('.bg');
-    let $banner = $('.banner');
     let $tabs = $('.tab');
-    let $container = $('.container');
-    let heightDefault = $container.outerHeight();
-    let topBefore = 0;
-    let $body = $('body');
+    let lastScrollTop = 0;
+    let ticking = false;
 
     $(window).on('wheel', function(event) {
-        event.preventDefault();
-        const scrollSpeed = 0.2;
-        const scrollValue = $(window).scrollTop() + (event.originalEvent.deltaY / 3) * scrollSpeed;
-        $('html, body').scrollTop(scrollValue);
+        event.preventDefault(); // Prevent default scrolling
 
-        let top = scrollValue;
+        let delta = event.originalEvent.deltaY;
+        let scrollSpeed = 0.4; // Adjusted for better smoothness
+        let newScrollTop = $(window).scrollTop() + delta * scrollSpeed;
+
+        $('html, body').stop().animate({ scrollTop: newScrollTop }, 150, 'linear');
+
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                handleScroll(newScrollTop);
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    function handleScroll(scrollTop) {
+        let maxDepth = 2; // Prevents excessive movement
+
         $listBg.each(function(index) {
-            if (index !== 0) {
-                $(this).css({
-                    'transform': `translateY(${(-top * index)}px)`,
-                    'transition': 'transform 1s ease-in-out'
-                });
-            }
-            if (index === $listBg.length - 1) {
-                $tabs.each(function() {
-                    $(this).css({
-                        'transform': `translateY(${(-top * index)}px)`,
-                        'transition': 'transform 0.5s ease-in-out'
-                    });
-                });
+            let depthFactor = (index + 1) * 0.2; // Prevents extreme parallax shifts
+            let translateY = -scrollTop * depthFactor;
 
-                if (topBefore < top) {
-                    let setHeight = heightDefault - $(window).scrollTop() * index;
-                    $container.css({
-                        'height': `${(setHeight + 100)}px`,
-                        'transition': 'height 0.05s ease-in-out'
-                    });
-                    topBefore = $(window).scrollTop();
-                }
-            }
-            $tabs.each(function(index) {
-                if (($(this).offset().top - top) <= $(window).height() * (index + 1)) {
-                    let $content = $(this).find('.content').first();
-                    let transformContent = $(window).height() * (index + 1) - ($(this).offset().top - top);
-                    $content.css({
-                        'transform': `translateY(${(-transformContent + (100 * index))}px)`,
-                        'transition': 'transform 0.5s ease-in-out'
-                    });
-                }
+            $(this).css({
+                'transform': `translateY(${translateY}px)`,
+                'transition': 'transform 0.5s ease-out'
             });
         });
-    });
+
+        // Text Movement - Matching Scroll Speed
+        $tabs.each(function(index) {
+            let $content = $(this).find('.content').first();
+            let offsetTop = $(this).offset().top;
+            let contentMove = Math.max(0, (scrollTop - offsetTop) * 0.3); // Balanced with parallax
+
+            $content.css({
+                'transform': `translateY(${contentMove}px)`,
+                'transition': 'transform 0.5s ease-out'
+            });
+        });
+
+        lastScrollTop = scrollTop;
+    }
 });
