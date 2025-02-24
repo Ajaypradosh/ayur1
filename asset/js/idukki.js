@@ -26,7 +26,7 @@ $(document).ready(function() {
         let maxDepth = 2; // Prevents excessive movement
 
         $listBg.each(function(index) {
-            let depthFactor = (index + 1) * 0.2; // Prevents extreme parallax shifts
+            let depthFactor = (index + 1) * 0.2; // Prevents  extreme parallax shifts
             let translateY = -scrollTop * depthFactor;
 
             $(this).css({
