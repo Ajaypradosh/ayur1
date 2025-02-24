@@ -1,22 +1,26 @@
+/* General Reset */
 *, ::after, ::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
     margin: 0 auto;
     max-width: 1200px;
-    background-color: #f5f2e8;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #fff; /* White background */
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #333; /* Dark gray text */
 }
 
+/* Grid Layout */
 .grid {
     padding: 20px;
 }
 
+/* Hero Section */
 .content {
     display: flex;
     align-items: center;
@@ -31,26 +35,38 @@ body {
 
 .content-right .info {
     text-align: left;
-    color: #000;
 }
 
 .content-right .info h1 {
     font-size: 48px;
     font-family: sans-serif;
-    color: #8b5a2b;
+    color: #4CAF50; /* Green accent */
     margin-bottom: 10px;
 }
 
-.content-right .info h2 {
-    font-size: 48px;
-    font-family: sans-serif;
-    color: #8b5a2b;
-    margin-bottom: 20px;
+.content-right .info h1 span {
+    color: #333; /* Dark gray for contrast */
 }
 
 .content-right .info p {
     font-size: 16px;
     margin-bottom: 20px;
+    color: #555; /* Gray for readability */
+}
+
+.explore {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.explore:hover {
+    background-color: #45a049; /* Darker green on hover */
 }
 
 .content-left {
@@ -62,20 +78,29 @@ body {
     max-width: 400px;
     height: auto;
     object-fit: contain;
+    animation: float 3s infinite ease-in-out;
 }
 
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Description Sections */
 .description, .details, .sustainability {
     margin-bottom: 40px;
     padding: 20px;
-    background-color: rgba(139, 90, 43, 0.1);
+    background-color: rgba(76, 175, 80, 0.05); /* Light green background */
     border-radius: 5px;
 }
 
 .description p, .details p, .sustainability p {
     font-size: 14px;
     text-align: left;
+    color: #555; /* Gray for readability */
 }
 
+/* Image Section */
 .image-section {
     text-align: center;
     margin-bottom: 40px;
@@ -85,4 +110,89 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    animation: rotate 10s infinite linear;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Floating Icons */
+.floating-icons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-icons i {
+    position: absolute;
+    font-size: 24px;
+    color: #4CAF50; /* Green icons */
+    opacity: 0.3;
+    animation: float 6s infinite ease-in-out;
+}
+
+.floating-icons i:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.floating-icons i:nth-child(2) { top: 20%; right: 5%; animation-delay: 2s; }
+.floating-icons i:nth-child(3) { bottom: 20%; left: 10%; animation-delay: 4s; }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f5f5f5; /* Light gray footer */
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #4CAF50; /* Green text */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-left img {
+        max-width: 300px;
+    }
+
+    .description, .details, .sustainability {
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-right .info h1 {
+        font-size: 40px;
+    }
+
+    .content-right .info p {
+        font-size: 14px;
+    }
+
+    .content-left img {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content-right .info h1 {
+        font-size: 30px;
+    }
+
+    .content-right .info p {
+        font-size: 12px;
+    }
+
+    .content-left img {
+        max-width: 200px;
+    }
 }
