@@ -1,51 +1,52 @@
-let listBg = document.querySelectorAll('.bg');
-let banner = document.querySelector('.banner');
-let tabs = document.querySelectorAll('.tab');
-let container = document.querySelector('.container');
-let heightDefault = container.offsetHeight;
-let topBefore = 0;
-let body = document.querySelector('body');
+$(document).ready(function() {
+    let $listBg = $('.bg');
+    let $tabs = $('.tab');
+    let lastScrollTop = 0;
+    let ticking = false;
 
-window.addEventListener('wheel', function(event){
-    event.preventDefault();
-    const scrollSpeed = 0.2;
-    const scrollValue = window.scrollY + (event.deltaY/3) * scrollSpeed;
-    window.scrollTo(0, scrollValue);
+    $(window).on('wheel', function(event) {
+        event.preventDefault(); // Prevent default scrolling
 
+        let delta = event.originalEvent.deltaY;
+        let scrollSpeed = 0.4; // Adjusted for better smoothness
+        let newScrollTop = $(window).scrollTop() + delta * scrollSpeed;
 
+        $('html, body').stop().animate({ scrollTop: newScrollTop }, 150, 'linear');
 
-    let top = scrollValue;
-    listBg.forEach((bg, index) => {
-        if(index != 0){
-            bg.animate({
-                transform: `translateY(${(-top*index)}px)`
-            }, { duration: 1000, fill: "forwards" });
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                handleScroll(newScrollTop);
+                ticking = false;
+            });
+            ticking = true;
         }
-        if(index == listBg.length - 1){
-            tabs.forEach(tab => {
-                tab.animate({
-                    transform: `translateY(${(-top*index)}px)`
-                }, { duration: 500, fill: "forwards" });
-            })
+    });
 
-            if(topBefore < top){
-                setHeight = heightDefault-window.scrollY*index;
-                container.animate({
-                    height: `${(setHeight + 100)}px`
-                }, { duration: 50, fill: "forwards" });
-                topBefore = window.scrollY;
-            }
-        }
-        tabs.forEach((tab, index) => {
-            // console.log(tab.offsetTop - top, window.innerHeight);
-            if((tab.offsetTop - top) <= window.innerHeight*(index+1)){
-                let content = tab.getElementsByClassName('content')[0];
-                let transformContent = window.innerHeight*(index+1) - (tab.offsetTop - top);
-                console.log(tab);
-                content.animate({
-                    transform: `translateY(${(-transformContent + (100*index))}px)`
-                }, { duration: 500, fill: "forwards" });
-            }
-        })
-    })
-}, { passive: false });
+    function handleScroll(scrollTop) {
+        let maxDepth = 2; // Prevents excessive movement
+
+        $listBg.each(function(index) {
+            let depthFactor = (index + 1) * 0.2; // Prevents extreme parallax shifts
+            let translateY = -scrollTop * depthFactor;
+
+            $(this).css({
+                'transform': `translateY(${translateY}px)`,
+                'transition': 'transform 0.5s ease-out'
+            });
+        });
+
+        // Text Movement - Matching Scroll Speed
+        $tabs.each(function(index) {
+            let $content = $(this).find('.content').first();
+            let offsetTop = $(this).offset().top;
+            let contentMove = Math.max(0, (scrollTop - offsetTop) * 0.3); // Balanced with parallax
+
+            $content.css({
+                'transform': `translateY(${contentMove}px)`,
+                'transition': 'transform 0.5s ease-out'
+            });
+        });
+
+        lastScrollTop = scrollTop;
+    }
+});

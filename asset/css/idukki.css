@@ -1,63 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-body{
+
+body {
     background-color: #010302;
-    margin :0;
-    font-family: 'Josefin Sans', sans-serif;    font-size: 15px;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
     overflow-x: hidden;
 }
 
-*::-webkit-scrollbar{
+/* Hide Scrollbar */
+*::-webkit-scrollbar {
     width: 0;
 }
-.container{
+
+.container {
     overflow: hidden;
     height: max-content;
-
 }
-.banner{
+
+/* ===== Banner Styling ===== */
+.banner {
     height: 50vw;
     position: relative;
     overflow: hidden;
 }
-.banner .bg{
+
+/* Background images for parallax effect */
+.banner .bg {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-size: 100%;
-    background-position: center bottom;
-    transition: 0.1s;
+    background-size: cover; /* Ensures proper scaling */
+    background-position: center;
+    transition: 0.3s ease-out;
 }
-.banner .bg:nth-child(1){
-    background-image: url(/asset/image/banner_00.jpg);
+
+/* Individual background layers */
+.banner .bg:nth-child(1) {
+    background-image: url(asset/image/banner_00.jpg);
 }
-.banner .bg:nth-child(2){
-    background-image: url(/asset/image/mala1.png);
+.banner .bg:nth-child(2) {
+    background-image: url(asset/image/mala1.png);
 }
-.banner .bg:nth-child(3){
+.banner .bg:nth-child(3) {
     top: 32%;
     text-align: center;
-} 
-.banner .bg:nth-child(3) h1, 
-.banner .bg:nth-child(3) h5
-{
+}
+.banner .bg:nth-child(3) h1,
+.banner .bg:nth-child(3) h5 {
     color: #ffffff;
-    font-size: 50px;
+    font-size: clamp(30px, 8vw, 50px);
     margin: 0;
     text-shadow: 0 0px 20px #4de85d;
 }
-.banner .bg:nth-child(3) h1
-{
-    font-size: 11vw;
+.banner .bg:nth-child(3) h1 {
+    font-size: clamp(40px, 11vw, 120px);
 }
-.banner .bg:nth-child(4){
-    background-image: url(/asset/image/mala.png);
+.banner .bg:nth-child(4) {
+    background-image: url(asset/image/mala.png);
 }
-.banner .bg:nth-child(5){
-    background-image: url(/asset/image/leafff.png);
+.banner .bg:nth-child(5) {
+    background-image: url(asset/image/leafff.png);
 }
-.tab{
+
+/* ===== Tab Section (Content) ===== */
+.tab {
     min-height: 100vh;
     background-color: #010302;
     z-index: 1;
@@ -67,57 +76,91 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    padding: 50px 5%;
+    flex-direction: column;
 }
-.tab::before{
+
+/* Gradient fade effect */
+.tab::before {
     position: absolute;
     height: 200px;
     width: 100vw;
-    background: linear-gradient(
-        to top, #000000, transparent
-    );
+    background: linear-gradient(to top, #000000, transparent);
     content: '';
     bottom: 100%;
     left: 0;
 }
-.tab.tab1{
-    background:linear-gradient(
-        to top, #000000 0%, transparent 20% , #000000 70%
-   ),url(/asset/image/tab1.jpg);
-   
-}
-.tab.tab1 .content{
-    margin-left: -500px;
 
+/* Tab Background Images */
+.tab.tab1 {
+    background: linear-gradient(to top, #000000 0%, transparent 20%, #000000 70%), url(asset/image/tab1.jpg);
+    background-size: cover;
+    background-position: center;
 }
-.tab.tab1 .content .des{
-    margin-left: 10px;
-
+.tab.tab2 {
+    background: linear-gradient(to top, #000000 0%, transparent 20%, #000000 70%), url(asset/image/idukki1.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
-.tab.tab2{
-    background:linear-gradient(
-        to top, #000000 0%, transparent 20% , #000000 70%
-   ),url(/asset/image/idukki1.jpg);
-}
-.tab.tab1 .content{
-    width: 700px;
-    max-width: 90%;
+/* Tab Content */
+.tab .content {
+    width: 80%;
+    max-width: 900px;
     color: #d3d3d3;
+    text-align: center;
 }
-.tab.tab2 .content{
-    color: #eaeaea;
-    width: 900px;
-    max-width: 90%;
+
+/* Desktop: Adjust margins */
+@media (min-width: 1024px) {
+    .tab.tab1 .content {
+        margin-left: -250px;
+    }
 }
-.tab.tab2 .content .des{
+
+/* Responsive Grid */
+.tab.tab2 .content .des {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     gap: 20px;
 }
-.tab.tab1 img{
+
+/* Images inside tabs */
+.tab img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center;
+}
+
+/* ===== Responsive Design Adjustments ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .banner {
+        height: 60vh;
+    }
+    .banner .bg:nth-child(3) h1 {
+        font-size: 9vw;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .banner {
+        height: 70vh;
+    }
+    .tab {
+        padding: 30px 5%;
+    }
+    .tab .content {
+        width: 90%;
+        text-align: center;
+    }
+    .banner .bg:nth-child(3) h1 {
+        font-size: 8vw;
+    }
+    .tab.tab1 .content {
+        margin-left: 0;
+    }
 }

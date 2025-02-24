@@ -3,8 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/asset/css/idukki.css">
+    <title>Ayur 1 Spices</title>
+    <link rel="icon" type="image/png" href="asset/image/ayur-logoTitle.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- <link rel="stylesheet" href="asset/css/idukki.css"> -->
+    <style>
+body{
+    background-color: #010302;
+    margin :0;
+    font-family: 'Josefin Sans', sans-serif;    font-size: 15px;
+    overflow-x: hidden;
+}
+
+*::-webkit-scrollbar{
+    width: 0;
+}
+.container{
+    overflow: hidden;
+    height: max-content;
+
+}
+.banner{
+    height: 50vw;
+    position: relative;
+    overflow: hidden;
+}
+.banner .bg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: center bottom;
+    transition: 0.1s;
+}
+.banner .bg:nth-child(1){
+    background-image: url(asset/image/banner_00.jpg);
+}
+.banner .bg:nth-child(2){
+    background-image: url(asset/image/mala1.png);
+}
+.banner .bg:nth-child(3){
+    top: 32%;
+    text-align: center;
+} 
+.banner .bg:nth-child(3) h1, 
+.banner .bg:nth-child(3) h5
+{
+    color: #ffffff;
+    font-size: 50px;
+    margin: 0;
+    text-shadow: 0 0px 20px #4de85d;
+}
+.banner .bg:nth-child(3) h1
+{
+    font-size: 11vw;
+}
+.banner .bg:nth-child(4){
+    background-image: url(asset/image/mala.png);
+}
+.banner .bg:nth-child(5){
+    background-image: url(asset/image/leafff.png);
+}
+.tab{
+    min-height: 100vh;
+    background-color: #010302;
+    z-index: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.tab::before{
+    position: absolute;
+    height: 200px;
+    width: 100vw;
+    background: linear-gradient(
+        to top, #000000, transparent
+    );
+    content: '';
+    bottom: 100%;
+    left: 0;
+}
+.tab.tab1{
+    background:linear-gradient(
+        to top, #000000 0%, transparent 20% , #000000 70%
+   ),url(asset/image/tab1.jpg);
+   
+}
+.tab.tab1 .content{
+    margin-left: -500px;
+
+}
+.tab.tab1 .content .des{
+    margin-left: 10px;
+
+}
+
+.tab.tab2{
+    background:linear-gradient(
+        to top, #000000 0%, transparent 20% , #000000 70%
+   ),url(asset/image/idukki1.jpg);
+}
+.tab.tab1 .content{
+    width: 700px;
+    max-width: 90%;
+    color: #d3d3d3;
+}
+.tab.tab2 .content{
+    color: #eaeaea;
+    width: 900px;
+    max-width: 90%;
+}
+.tab.tab2 .content .des{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.tab.tab1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+    </style>
 </head>
 <body>
 
@@ -39,20 +168,28 @@
         </div>
         <div class="tab tab2">
             <div class="content">
-                <h5>IDUKKI seen anu</h5>
-                <h2>Mwone</h2>
+                <h5>IDUKKI </h5>
+                <h2>The Spice Garden of Kerala</h2>
                 <div class="des">
                     <div>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat autem alias a id distinctio, minus ipsam similique laborum sunt nihil eligendi odio, quidem minima magnam molestias blanditiis. Facere, fuga nulla odio dicta quas molestias blanditiis sed harum repellendus sapiente, impedit ullam. Beatae ipsum error, eos nesciunt libero iure numquam ut neque saepe accusantium, nobis nihil ab voluptas blanditiis reprehenderit. Illo obcaecati ut quis eius alias est facilis. Sint quae exercitationem aut eius, facere ea tempora nulla, illum quo sequi corrupti adipisci aspernatur laudantium consequatur consectetur explicabo cupiditate ratione! Laudantium sunt pariatur sed qui ratione facilis distinctio harum porro alias nemo.
-                    </div>
+                        Nestled in the heart of the Western Ghats, Idukki is more than just a scenic wonder—it's the spice capital of Kerala. From the mist-covered Cardamom Hills to the pepper-laden plantations, this region has been at the center of Kerala’s spice trade for centuries.A Land of Fragrant Treasures
+                        Idukki’s high-altitude climate and rich soil make it the perfect home for some of the world’s finest spices:
+                        
+                         Cardamom: Often called the “Queen of Spices,” Idukki produces some of the highest-quality green cardamom, prized for its intense aroma and flavor.
+                        Black Pepper: Known as the “King of Spices,” Idukki’s pepper has been a key player in global spice trade routes since ancient times.
+                        Nutmeg & Mace: These spices add a rich, warm depth to curries and sweets, making them essential in both local and international cuisine.
+                        Clove & Cinnamon: The bold and aromatic flavors of these spices make them indispensable in traditional Ayurvedic medicine and Kerala’s flavorful dishes.                    </div>
                     <div>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat autem alias a id distinctio, minus ipsam similique laborum sunt nihil eligendi odio, quidem minima magnam molestias blanditiis. Facere, fuga nulla odio dicta quas molestias blanditiis sed harum repellendus sapiente, impedit ullam. Beatae ipsum error, eos nesciunt libero iure numquam ut neque saepe accusantium, nobis nihil ab voluptas blanditiis reprehenderit. Illo obcaecati ut quis eius alias est facilis. Sint quae exercitationem aut eius, facere ea tempora nulla, illum quo sequi corrupti adipisci aspernatur laudantium consequatur consectetur explicabo cupiditate ratione! Laudantium sunt pariatur sed qui ratione facilis distinctio harum porro alias nemo.
-                    </div>
+                        Whether it’s the bold kick of black pepper in your curry, the sweet warmth of nutmeg in a dessert, or the aromatic depth of cardamom in your chai, every flavor carries a story from Idukki’s spice gardens.
+
+                        For centuries, traders from across the world have traveled here in search of these prized spices. Today, a visit to Idukki is more than just a journey—it’s an experience through time, culture, and the rich flavors that define Kerala.
+                        
+                         In Idukki, every spice has a story, and every flavor is a memory waiting to be made.                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="/asset/js/idukki.js"></script>
+    <script src="asset/js/idukki.js"></script>
 </body>
 </html>

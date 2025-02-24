@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achievements - Ayur Spices</title>
+    <title>Ayur 1 Spices</title>
+    <link rel="icon" type="image/png" href="asset/image/ayur-logoTitle.png">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <style>
@@ -20,6 +22,24 @@
         }
 
         /* Navigation Menu Styling */
+        
+        .navbar-toggler{
+                border: none; /* Remove border */
+            }
+            .navbar-toggler .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 6h22M4 14h22M4 22h22'/%3E%3C/svg%3E"); /* Hamburger icon */
+            }
+            .navbar-toggler.collapsed .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M6 6L24 24M6 24L24 6'/%3E%3C/svg%3E"); /* X icon */
+            }
+            .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 6h22M4 14h22M4 22h22'/%3E%3C/svg%3E"); /* Hamburger icon */
+            }
+            .navbar-toggler:focus {
+                outline: none; /* Remove focus outline */
+                box-shadow: none; /* Remove any box shadow */
+            }
+        /* Navigation Menu Styling */
         .nav-link {
             color: #376701;
             font-family: 'Playfair Display', serif;
@@ -32,16 +52,23 @@
         }
 
         .nav-link::after {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background-color: #d4af37;
-            bottom: -4px;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: width 0.3s;
-        }
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #d4af37;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s;
+}
+
+@media screen and (max-width: 975px) {
+    .nav-link::after {
+        display: none; /* Hides the pseudo-element entirely */
+    }
+}
+
 
         .nav-link:hover {
             color: #000000;
@@ -79,12 +106,12 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <!-- Logo -->
-                <a class="navbar-brand logo" href="index.html">
+                <a class="navbar-brand logo" href="#">
                     <img src="asset/image/ayurlogo.png" alt="Ayur Spices">
                 </a>
 
                 <!-- Responsive Toggle Button for Mobile Devices -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="this.classList.toggle('collapsed');">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -92,13 +119,16 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav text-end">
                         <li class="nav-item">
+                            <hr class="d-lg-none" />
+                          </li>
+                        <li class="nav-item">
                             <a href="index.html" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
                             <a href="achievement.html" class="nav-link">Achievements</a>
                         </li>
                         <li class="nav-item">
-                            <a href="about.html" class="nav-link">About</a>
+                            <a href="about.html" class="nav-link">About Us</a>
                         </li>
                         <li class="nav-item">
                             <a href="contact.html" class="nav-link">Contact Us</a>
@@ -109,6 +139,7 @@
         </nav>
     </header>
 
+
     <!-- Achievements Section -->
     <section class="container my-5">
         <h2 class="text-center">Our Achievements</h2>
@@ -117,26 +148,26 @@
         </p>
         <div class="row">
             <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="/asset/image/award1.png" class="card-img-top" alt="Best Quality Product">
-                    <div class="card-body">
-                        <h5 class="card-title">Bussiness Excellence Award 2k21 of JCI</h5>
+                <div class="card" style="width: 100%; height: 100%;">
+                    <img src="asset/image/award1.png" class="card-img-top" alt="Best Quality Product">
+                    <div class="card-body d-flex">
+                        <h5 class="card-title mt-auto justify-content-center">Bussiness Excellence Award 2k21 of JCI</h5>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="/asset/image/award2.png" class="card-img-top" alt="Top Exporter">
-                    <div class="card-body">
-                        <h5 class="card-title">Bussiness Excellence Award 2k21</h5>
+                <div class="card" style="width: 100%; height: 100%;">
+                    <img src="asset/image/award2.png" class="card-img-top" alt="Top Exporter">
+                    <div class="card-body d-flex ">
+                        <h5 class="card-title  mt-auto justify-content-center">Bussiness Excellence Award 2k21</h5>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="/asset/image/award3.png" class="card-img-top" alt="Customer Satisfaction">
-                    <div class="card-body">
-                        <h5 class="card-title">Customer Satisfaction</h5>
+                <div class="card" style="width: 100%; height: 100%;">
+                    <img src="asset/image/award3.png" class="card-img-top" alt="Customer Satisfaction">
+                    <div class="card-body d-flex ">
+                        <h5 class="card-title mt-auto  justify-content-center">Customer Satisfaction Award</h5>
                     </div>
                 </div>
             </div>
