@@ -5,8 +5,9 @@
 }
 body{
     margin: 0 100px;
-    background-color: #ffffff;
-    position: relative;
+    position: absolute;
+    background-image: url('/asset/image/pepperba.jpg');
+    background-size: cover;
 }
 body::before{
     content: "";
@@ -21,8 +22,6 @@ body::before{
     opacity: 0.03;
     z-index: -1;
 }
-
-
 
 input{
     padding: 10px 20px;
