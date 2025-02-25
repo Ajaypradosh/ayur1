@@ -44,8 +44,18 @@ if (isset($_POST['email'])) {
         // Email Settings
         $mail->setFrom('bcacompilers@gmail.com', 'admin');
         $mail->addAddress($email, $name);
-        $mail->Subject = 'Test Email';
-        $mail->Body = 'This is a test email sent without Composer!';
+        $mail->Subject = 'Test Email Notification';
+$mail->Body = 'Hello,
+
+This is a test email sent without Composer!  
+
+We are testing the email functionality to ensure proper delivery.  
+
+If you received this email, everything is working fine.  
+
+Best regards,  
+Your Team';
+
         
         // Send Email
         $mail->send();
