@@ -12,6 +12,12 @@ function learnMore() {
     // console.log("Learn More");
     window.location.href = "idukki.html";
 }
+
+
+
+
+
+
 $(document).ready(function() {
     $('#emailbtn').click(function() {
         console.log('clicked');
@@ -41,36 +47,46 @@ $(document).ready(function() {
             if(message != '') {
                 if(name != ''){
 
-                    // $.ajax({
-                    //     url: 'asset/php/mail.php',
-                    //     type: 'POST',
-                    //     data: {
-                    //         email: email,
-                    //         message: message
-                    //     },
-                    //     success: function(response) {
-                    //         console.log('akjsbdjb')
-                    //         if(response == 'success'){
-                    //             // console.log(response);
-                    //         alertBox('success', 'Email sent successfully');
+                    // console.log('akjsbdAAAAAAAAAAAAAAAAAAAjb')
+                    $('#loader').css('display', 'block');
+                    $.ajax({
+                        url: 'asset/php/mail.php',
+                        type: 'POST',
+                        data: {
+                            email: email,
+                            message: message,
+                            name: name
+                        },
+                        success: function(response) {
+                            console.log('response :', response);
+                            // console.log(response.status);
+
+                            response = response.trim();
+
+                            if(response === 'success'){
+                                $('#loader').css('display', 'none');
+                                alertBox('success', 'Email sent successfully');
+                                $('#emailinput').removeClass('border border-danger');
+                                $('#message').removeClass ('border border-danger');
+                            }
+                            else{
+                                $('#loader').css('display', 'none');
+                                alertBox('error', 'email and message not sent !!!!!');
+                            }
+                            
+                        },
+                        error : function(error) {
+                            $('#loader').css('display', 'none');
+                            console.log(error);
+                            alertBox('error', 'email and message not sent');
+                        }
+                        
+                    });
+                    
+                    console.log('akjsbdjb')
+                    // alertBox('success', 'Email sent successfully');
                     // $('#emailinput').removeClass('border border-danger');
                     // $('#message').removeClass ('border border-danger');
-                    //         }
-                    //         else{
-                    //             // console.log(response);
-                    //         }
-                            
-                    //     },
-                    //     error : function(error) {
-                    //         console.log(error);
-                    //         alertBox('error', 'email and message not sent');
-                    //     }
-    
-                    // });
-
-                    alertBox('success', 'Email sent successfully');
-                    $('#emailinput').removeClass('border border-danger');
-                    $('#message').removeClass ('border border-danger');
                     
                 }else{
                     alertBox('error', 'Please enter your name');
